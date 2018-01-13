@@ -1,0 +1,31 @@
+Aliases:
+- gitAliases	[commands for git]
+- editGitAliases[nano editing git.txt]
+- editAliases	[nano editing aliases.txt]
+- zshrc         [nano editing .zshrc]
+- reload	[reload zshrc after changes]
+
+- showFiles 	[restarts Finder and show hidden files]
+- hideFiles 	[restarts Finder and hide hidden files]
+
+- gulpIni	[initializes gulp instalation in current folder]
+- gulpInst	[allows fast install with "gulpInst gulp-package"]
+- nsl	 	[cd to newsletter file and start gulp processing]
+- alert		[cd to alert file and start gulp processing]
+- bSync		[cd to website file and start gulp browser-sync]
+
+- py		[shortcut for "python3"]
+- pyApp		[pyinstaller from *.spec]
+- pyExe		[docker container for pyinstaller .exe creation]
+- wk		[launches wk.py app "wk <arg>"]
+- jupyter notebook <name> [launches notebook server]
+
+- icon <name>	[creates name.icns file out of 1024x1024 icon.png]
+
+Commands
+- rename	[replace file names - "rename -vs old new *"]
+		[trim file names - "rename -d text *"]
+- echo		[create file - "echo 'text'>file.ext"]
+- nano		[edit file in nano - "nano file.ext"]
+- perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
+- sips		[resize images - "sips -Z 1800 *.jpg"]
