@@ -29,4 +29,4 @@ Commands
 - nano		[edit file in nano - "nano file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     [cd to target destinaton: python, mjml, etc.]
+- go <name>     [cd to target destinaton: py, mjml, html]

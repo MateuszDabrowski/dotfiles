@@ -128,7 +128,7 @@ function icon() {
 
 function go() {
     cd
-    if [ "$1" = python ]
+    if [ "$1" = py ]
         then
             cd Documents/Code/Python/
     elif [ "$1" = html ]
