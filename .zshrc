@@ -125,3 +125,17 @@ function icon() {
         echo Podaj nazwę pliku .icns
     fi;
 }
+
+function go() {
+    cd
+    if [ "$1" = python ]
+        then
+            cd Documents/Code/Python/
+    elif [ "$1" = html ]
+        then
+            cd Documents/Code/HTML/
+    elif [ "$1" = mjml ]
+        then
+            cd mjml-app/MJML-Mails/
+    fi
+}
