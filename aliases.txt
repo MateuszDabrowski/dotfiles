@@ -17,7 +17,7 @@ Aliases:
 - py		[shortcut for "python3"]
 - pyApp		[pyinstaller from *.spec]
 - pyExe		[docker container for pyinstaller .exe creation]
-- wk		[launches wk.py app "wk <arg>"]
+- api		[launches apireader.py app "api <arg>"]
 - jupyter notebook <name> [launches notebook server]
 
 - icon <name>	[creates name.icns file out of 1024x1024 icon.png]

@@ -78,14 +78,14 @@ function nsl() {
 alias py="python3"
 alias pyApp="pyinstaller --onefile --clean *.spec"
 
-function wk() {
+function api() {
     cd
-    cd Documents/Code/Python/WK/
+    cd Documents/Code/Python/API\ Reader/
     if [ -n "$1" ]
     then
-        py wk.py $1
+        py apireader.py $1
     else
-        py wk.py
+        py apireader.py
     fi
     cd ../;
 }
