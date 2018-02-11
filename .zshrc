@@ -32,7 +32,7 @@ alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; zshrcGit"
 alias zshrcGit="cd; cp .zshrc Documents/Code/Terminal; cd Documents/Code/Terminal; git status"
 alias editGitAliases="cd; cd Documents/Code/Terminal; nano git.txt; cd"
 alias editPyAliases="cd; cd Documents/Code/Terminal; nano py.txt; cd"
-alias editAliases="cd; cd Documents//Code/Terminal; nano aliases.txt; cd"
+alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; cd"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -77,15 +77,16 @@ function nsl() {
 #--------------------
 alias py="python3"
 alias pyApp="pyinstaller --onefile --clean *.spec"
+alias web="cd; cd Documents/Code/Python/Api\ Apps/; py api_pipe.py; cd"
 
 function api() {
     cd
-    cd Documents/Code/Python/API\ Reader/
+    cd Documents/Code/Python/API\ Apps/
     if [ -n "$1" ]
     then
-        py apireader.py $1
+        py api_reader.py $1
     else
-        py apireader.py
+        py api_reader.py
     fi
     cd ../;
 }

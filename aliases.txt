@@ -17,7 +17,8 @@ Aliases:
 - py		[shortcut for "python3"]
 - pyApp		[pyinstaller from *.spec]
 - pyExe		[docker container for pyinstaller .exe creation]
-- api		[launches apireader.py app "api <arg>"]
+- api		[launches api_reader.py app "api <arg>"]
+- web		[launches api_pipe.pu app]
 - jupyter notebook <name> [launches notebook server]
 
 - icon <name>	[creates name.icns file out of 1024x1024 icon.png]
