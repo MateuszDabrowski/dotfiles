@@ -32,7 +32,7 @@ alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; zshrcGit"
 alias zshrcGit="cd; cp .zshrc Documents/Code/Terminal; cd Documents/Code/Terminal; git status"
 alias editGitAliases="cd; cd Documents/Code/Terminal; nano git.txt; cd"
 alias editPyAliases="cd; cd Documents/Code/Terminal; nano py.txt; cd"
-alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; cd"
+alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -76,7 +76,7 @@ function nsl() {
 # Python aliases
 #--------------------
 alias py="python3"
-alias pyApp="pyinstaller --onefile --clean *.spec"
+alias pyApp="py setup.py build"
 alias web="cd; cd Documents/Code/Python/Api\ Apps/; py api_pipe.py; cd"
 
 function api() {
@@ -88,17 +88,6 @@ function api() {
     else
         py api_reader.py
     fi
-    cd ../;
-}
-
-function pyExe() { 
-    cp *.py ./src
-    cp *.spec ./src
-    docker run -v "$(pwd):/src/" cdrx/pyinstaller-windows
-    cd ./dist/windows
-    cp *.exe ../
-    cd ../
-    rm -R ./windows
     cd ../;
 }
 
