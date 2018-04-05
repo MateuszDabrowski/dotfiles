@@ -10,14 +10,12 @@ Aliases:
 
 - gulpIni	[initializes gulp instalation in current folder]
 - gulpInst	[allows fast install with "gulpInst gulp-package"]
-- nsl	 	[cd to newsletter file and start gulp processing]
-- alert		[cd to alert file and start gulp processing]
 - bSync		[cd to website file and start gulp browser-sync]
 
 - py		[shortcut for "python3"]
 - pyApp		[cx_Freeze from setup.py]
 - api		[launches api_reader.py app "api <arg>"]
-- web		[launches api_pipe.pu app]
+- elq		[launches elquent.py]
 - jupyter notebook <name> [launches notebook server]
 
 - icon <name>	[creates name.icns file out of 1024x1024 icon.png]
@@ -26,7 +24,6 @@ Commands
 - rename	[replace file names - "rename -vs old new *"]
 		[trim file names - "rename -d text *"]
 - echo		[create file - "echo 'text'>file.ext"]
-- nano		[edit file in nano - "nano file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
 - go <name>     [cd to target destinaton: py, mjml, html]

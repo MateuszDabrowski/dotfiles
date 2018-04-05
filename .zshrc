@@ -48,36 +48,12 @@ alias bSync="cd; cd Documents/Code/HTML/Website; gulp run; cd"
 alias gulpIni="npm install --global gulp-cli; npm install --save-dev gulp; npm init"
 alias gulpInst="npm install --save-dev"
 
-function alert() {
-    cd
-    cd Documents/Code/HTML/Email/Alert_MJML/
-    if [ -n "$2" ]
-    then
-        gulp $1 --$2
-    else
-        echo Alert:: test/run  ala/ak/ao/aap/all
-    fi
-    cd;
-}
-
-function nsl() {
-    cd
-    cd Documents/Code/HTML/Email/Newsletter_MJML/
-    if [ -n "$2" ]
-    then
-        gulp $1 --$2
-    else
-        echo Newsletter:: test/run npb/all
-    fi
-    cd;
-}
-
 #--------------------
 # Python aliases
 #--------------------
 alias py="python3"
 alias pyApp="py setup.py build"
-alias web="cd; cd Documents/Code/Python/Api\ Apps/; py api_pipe.py; cd"
+alias elq='cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 
 function api() {
     cd
@@ -92,7 +68,7 @@ function api() {
 }
 
 #--------------------
-# Other functions
+# Icon creator
 #--------------------
 
 function icon() {
@@ -115,6 +91,10 @@ function icon() {
         echo Podaj nazwę pliku .icns
     fi;
 }
+
+#------------------
+# Jump cd
+#------------------
 
 function go() {
     cd
