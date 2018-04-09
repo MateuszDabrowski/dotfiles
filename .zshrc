@@ -2,9 +2,9 @@
 
 export ZSH=/Users/mateuszdabrowski/.oh-my-zsh
 
-#--------------------
+#-------------------------------------
 # BASIC CONFIGURATION
-#--------------------
+#-------------------------------------
 
 ZSH_THEME="mh"
 COMPLETION_WAITING_DOTS="true"
@@ -15,8 +15,19 @@ source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 setopt auto_cd
 
 #--------------------
-# ALIASES
+# PyEnv
 #--------------------
+
+# Virtualenvs path
+export WORKON_HOME=~/Documents/Code/.ve
+# Projects path
+export PROJECT_HOME=~/Documents/Code/Python
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper
+
+#-------------------------------------
+# ALIASES
+#-------------------------------------
 
 #--------------------
 # Show alias list
@@ -52,20 +63,9 @@ alias gulpInst="npm install --save-dev"
 # Python aliases
 #--------------------
 alias py="python3"
+alias jup="jupyter notebook"
 alias pyApp="py setup.py build"
-alias elq='cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
-
-function api() {
-    cd
-    cd Documents/Code/Python/API\ Apps/
-    if [ -n "$1" ]
-    then
-        py api_reader.py $1
-    else
-        py api_reader.py
-    fi
-    cd ../;
-}
+alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 
 #--------------------
 # Icon creator
@@ -101,6 +101,9 @@ function go() {
     if [ "$1" = py ]
         then
             cd Documents/Code/Python/
+    elif [ "$1" = jup ]
+	then
+	    cd Documents/Code/Python/Jupyter 
     elif [ "$1" = html ]
         then
             cd Documents/Code/HTML/
