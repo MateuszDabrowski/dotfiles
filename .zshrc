@@ -39,7 +39,7 @@ alias pyAliases="cd; cd Documents/Code/Terminal; cat py.txt; cd"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; zshrcGit"
+alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; zshrcGit; reload"
 alias zshrcGit="cd; cp .zshrc Documents/Code/Terminal; cd Documents/Code/Terminal; git status"
 alias editGitAliases="cd; cd Documents/Code/Terminal; nano git.txt; cd"
 alias editPyAliases="cd; cd Documents/Code/Terminal; nano py.txt; cd"
@@ -58,6 +58,14 @@ alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias bSync="cd; cd Documents/Code/HTML/Website; gulp run; cd"
 alias gulpIni="npm install --global gulp-cli; npm install --save-dev gulp; npm init"
 alias gulpInst="npm install --save-dev"
+
+#--------------------
+# Git aliases
+#--------------------
+
+alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) - %C(dim bold white)%an%C(reset)%n%C(white)%s%C(reset) %n%C(dim bold white)%cr »%C(reset) %C(dim white)%ci%C(reset)%n' --reverse"
+alias gitSearch="git log --oneline --reverse | grep"
+alias gitDiff="git log -p -1"
 
 #--------------------
 # Python aliases
