@@ -19,8 +19,7 @@ Aliases:
 - jupyter notebook <name> [launches notebook server]
 
 - gitLog	[pretty git log --oneline with additional data]
-- gitSearch	[uses grep to search through git log (case sensitive)]
-- gitDiff	[shows last diff in git log]
+- gitSearch	[uses grep to search through git log (case insensitive)]
 
 - icon <name>	[creates name.icns file out of 1024x1024 icon.png]
 

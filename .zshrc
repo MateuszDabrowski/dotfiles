@@ -63,9 +63,8 @@ alias gulpInst="npm install --save-dev"
 # Git aliases
 #--------------------
 
-alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) - %C(dim bold white)%an%C(reset)%n%C(white)%s%C(reset) %n%C(dim bold white)%cr »%C(reset) %C(dim white)%ci%C(reset)%n' --reverse"
-alias gitSearch="git log --oneline --reverse | grep"
-alias gitDiff="git log -p -1"
+alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
+alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(yellow)%an%C(reset) › %C(white)%s%C(reset) %C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)' --reverse | grep -i"
 
 #--------------------
 # Python aliases
