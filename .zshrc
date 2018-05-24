@@ -70,7 +70,7 @@ alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset
 # Python aliases
 #--------------------
 alias py="python3"
-alias jup="jupyter notebook"
+alias jup="go jup;jupyter lab"
 alias pyApp="py setup.py build"
 alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 

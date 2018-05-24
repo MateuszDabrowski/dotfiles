@@ -16,7 +16,7 @@ Aliases:
 - pyApp		[cx_Freeze from setup.py]
 - api		[launches api_reader.py app "api <arg>"]
 - elq		[launches elquent.py]
-- jupyter notebook <name> [launches notebook server]
+- jup 		[launches jupyter lab]
 
 - gitLog	[pretty git log --oneline with additional data]
 - gitSearch	[uses grep to search through git log (case insensitive)]
