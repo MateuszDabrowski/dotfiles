@@ -1,6 +1,4 @@
 Aliases:
-- gitAliases	[commands for git]
-- editGitAliases[nano editing git.txt]
 - editAliases	[nano editing aliases.txt]
 - zshrc         [nano editing .zshrc]
 - reload	[reload zshrc after changes]
@@ -14,7 +12,6 @@ Aliases:
 
 - py		[shortcut for "python3"]
 - pyApp		[cx_Freeze from setup.py]
-- api		[launches api_reader.py app "api <arg>"]
 - elq		[launches elquent.py]
 - jup 		[launches jupyter lab]
 
@@ -29,4 +26,4 @@ Commands
 - echo		[create file - "echo 'text'>file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     [cd to target destinaton: py, mjml, html]
+- go <name>     [cd to target destinaton: py, elq, jup, mjml, html]

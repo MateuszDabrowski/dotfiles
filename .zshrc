@@ -33,16 +33,11 @@ pyenv virtualenvwrapper
 # Show alias list
 #--------------------
 alias aliases="cd; cd Documents/Code/Terminal; cat aliases.txt; cd"
-alias gitAliases="cd; cd Documents/Code/Terminal; cat git.txt; cd"
-alias pyAliases="cd; cd Documents/Code/Terminal; cat py.txt; cd"
 
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; zshrcGit; reload"
-alias zshrcGit="cd; cp .zshrc Documents/Code/Terminal; cd Documents/Code/Terminal; git status"
-alias editGitAliases="cd; cd Documents/Code/Terminal; nano git.txt; cd"
-alias editPyAliases="cd; cd Documents/Code/Terminal; nano py.txt; cd"
+alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; cd Documents/Code/Terminal; git status; reload"
 alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
@@ -108,6 +103,9 @@ function go() {
     if [ "$1" = py ]
         then
             cd Documents/Code/Python/
+    elif [ "$1" = elq ]
+	then
+	    cd Documents/Code/Python/ELQuent
     elif [ "$1" = jup ]
 	then
 	    cd Documents/Code/Python/Jupyter 

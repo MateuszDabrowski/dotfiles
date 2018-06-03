@@ -1,7 +1,0 @@
-Python commands:
-–– py				» Alias for: python3
-—— pyApp			» Launches pyInstaller
-—— pyExe			» Creates .exe from pyApp via Docker
-–– pip install <name>		» Installs package from PyPI
-—— jupyter notebook <name>	» Launches file on jupyter server
-—— wk				» Launches wk.py app with arguments
