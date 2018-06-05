@@ -1,5 +1,5 @@
 # SETTINGS
-
+ 
 export ZSH=/Users/mateuszdabrowski/.oh-my-zsh
 
 #-------------------------------------
@@ -37,7 +37,7 @@ alias aliases="cd; cd Documents/Code/Terminal; cat aliases.txt; cd"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; cd Documents/Code/Terminal; git status; reload"
+alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
 alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
@@ -75,23 +75,38 @@ alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 
 function icon() {
     if [ -n "$1" ]
-    then
-        mkdir $1.iconset
-        sips -z 16 16     Icon.png --out $1.iconset/icon_16x16.png
-        sips -z 32 32     Icon.png --out $1.iconset/icon_16x16@2x.png
-        sips -z 32 32     Icon.png --out $1.iconset/icon_32x32.png
-        sips -z 64 64     Icon.png --out $1.iconset/icon_32x32@2x.png
-        sips -z 128 128   Icon.png --out $1.iconset/icon_128x128.png
-        sips -z 256 256   Icon.png --out $1.iconset/icon_128x128@2x.png
-        sips -z 256 256   Icon.png --out $1.iconset/icon_256x256.png
-        sips -z 512 512   Icon.png --out $1.iconset/icon_256x256@2x.png
-        sips -z 512 512   Icon.png --out $1.iconset/icon_512x512.png
-        cp Icon.png $1.iconset/icon_512x512@2x.png
-        iconutil --convert icns $1.iconset
-        rm -R $1.iconset
+        then
+            mkdir $1.iconset
+            sips -z 16 16     Icon.png --out $1.iconset/icon_16x16.png
+            sips -z 32 32     Icon.png --out $1.iconset/icon_16x16@2x.png
+            sips -z 32 32     Icon.png --out $1.iconset/icon_32x32.png
+            sips -z 64 64     Icon.png --out $1.iconset/icon_32x32@2x.png
+            sips -z 128 128   Icon.png --out $1.iconset/icon_128x128.png
+            sips -z 256 256   Icon.png --out $1.iconset/icon_128x128@2x.png
+            sips -z 256 256   Icon.png --out $1.iconset/icon_256x256.png
+            sips -z 512 512   Icon.png --out $1.iconset/icon_256x256@2x.png
+            sips -z 512 512   Icon.png --out $1.iconset/icon_512x512.png
+            cp Icon.png $1.iconset/icon_512x512@2x.png
+            iconutil --convert icns $1.iconset
+            rm -R $1.iconset
     else
         echo Podaj nazwę pliku .icns
     fi;
+}
+
+#------------------
+# Virtualenv
+#------------------
+
+function venv() {
+    cd
+    if [ "$1" = md ]
+        then
+            cd Documents/Code/HTML/nikola
+            source bin/activate
+            cd mateuszdabrowski.pl
+            gitLog -1
+    fi
 }
 
 #------------------
@@ -104,11 +119,11 @@ function go() {
         then
             cd Documents/Code/Python/
     elif [ "$1" = elq ]
-	then
-	    cd Documents/Code/Python/ELQuent
+        then
+            cd Documents/Code/Python/ELQuent
     elif [ "$1" = jup ]
-	then
-	    cd Documents/Code/Python/Jupyter 
+        then
+            cd Documents/Code/Python/Jupyter
     elif [ "$1" = html ]
         then
             cd Documents/Code/HTML/
