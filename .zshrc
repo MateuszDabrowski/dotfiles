@@ -95,21 +95,6 @@ function icon() {
 }
 
 #------------------
-# Virtualenv
-#------------------
-
-function venv() {
-    cd
-    if [ "$1" = md ]
-        then
-            cd Documents/Code/HTML/nikola
-            source bin/activate
-            cd mateuszdabrowski.pl
-            gitLog -1
-    fi
-}
-
-#------------------
 # Jump cd
 #------------------
 
@@ -118,6 +103,9 @@ function go() {
     if [ "$1" = py ]
         then
             cd Documents/Code/Python/
+    elif [ "$1" = md ]
+	then
+	    cd Documents/Code/HTML/Website/mateuszdabrowski
     elif [ "$1" = elq ]
         then
             cd Documents/Code/Python/ELQuent

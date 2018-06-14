@@ -26,5 +26,5 @@ Commands
 - echo		[create file - "echo 'text'>file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     [cd to target destinaton: py, elq, jup, mjml, html]
+- go <name>     [cd to target destinaton: py, md, elq, jup, mjml, html]
 - venv <name>   [cd to target and launch virtualenv: md; deactivate to close]
