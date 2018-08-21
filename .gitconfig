@@ -1,0 +1,26 @@
+[user]
+    name = Mateusz Dąbrowski
+    email = md@prawo.cc
+    username = md
+[core]
+    editor = code --wait
+    excludesfile = /Users/mateuszdabrowski/.gitignore_global
+    pager = cat
+[web]
+    browser = google-chrome
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[commit]
+	template = /Users/mateuszdabrowski/.stCommitMsg
+    verbose = true
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f

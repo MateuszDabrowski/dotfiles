@@ -8,7 +8,7 @@ export ZSH="/Users/md/.oh-my-zsh"
 
 ZSH_THEME="mh"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git brew)
+plugins=(git brew zsh-syntax-highlighting osx)
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
