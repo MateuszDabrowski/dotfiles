@@ -1,6 +1,6 @@
 # SETTINGS
- 
-export ZSH=/Users/mateuszdabrowski/.oh-my-zsh
+
+export ZSH="/Users/md/.oh-my-zsh"
 
 #-------------------------------------
 # BASIC CONFIGURATION
@@ -8,22 +8,11 @@ export ZSH=/Users/mateuszdabrowski/.oh-my-zsh
 
 ZSH_THEME="mh"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git brew nom)
+plugins=(git brew)
 source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
 setopt auto_cd
-
-#--------------------
-# PyEnv
-#--------------------
-
-# Virtualenvs path
-export WORKON_HOME=~/Documents/Code/.ve
-# Projects path
-export PROJECT_HOME=~/Documents/Code/Python
-eval "$(pyenv init -)"
-pyenv virtualenvwrapper
 
 #-------------------------------------
 # ALIASES
@@ -37,7 +26,7 @@ alias aliases="cd; cd Documents/Code/Terminal; cat aliases.txt; cd"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../mateuszdabrowski; nano .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
+alias zshrc="cd; cd ../md; nano .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
 alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
@@ -50,14 +39,13 @@ alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall F
 #--------------------
 # Gulp aliases
 #--------------------
-alias bSync="cd; cd Documents/Code/HTML/Website; gulp run; cd"
+alias bSync="cd; cd Documents/Code/HTML/Workspace; gulp run; cd"
 alias gulpIni="npm install --global gulp-cli; npm install --save-dev gulp; npm init"
 alias gulpInst="npm install --save-dev"
 
 #--------------------
 # Git aliases
 #--------------------
-
 alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
 alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(yellow)%an%C(reset) › %C(white)%s%C(reset) %C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)' --reverse | grep -i"
 
@@ -72,7 +60,6 @@ alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 #--------------------
 # Icon creator
 #--------------------
-
 function icon() {
     if [ -n "$1" ]
         then
@@ -97,15 +84,14 @@ function icon() {
 #------------------
 # Jump cd
 #------------------
-
 function go() {
     cd
     if [ "$1" = py ]
         then
             cd Documents/Code/Python/
     elif [ "$1" = md ]
-	then
-	    cd Documents/Code/HTML/Website/mateuszdabrowski
+	      then
+	          cd Documents/Code/HTML/mateuszdabrowski
     elif [ "$1" = elq ]
         then
             cd Documents/Code/Python/ELQuent
@@ -117,6 +103,6 @@ function go() {
             cd Documents/Code/HTML/
     elif [ "$1" = mjml ]
         then
-            cd mjml-app/MJML-Mails/
+            cd Documents/Code/MJML
     fi
 }
