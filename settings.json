@@ -1,0 +1,57 @@
+{
+    // Window
+    "window.zoomLevel": -1,
+    // Files
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    // Workbench
+    "workbench.colorTheme": "Material Theme",
+    "workbench.fontAliasing": "auto",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.showIcons": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#00BCD4",
+        "list.activeSelectionForeground": "#00BCD4",
+        "list.inactiveSelectionForeground": "#00BCD4",
+        "list.highlightForeground": "#00BCD4",
+        "scrollbarSlider.activeBackground": "#00BCD450",
+        "editorSuggestWidget.highlightForeground": "#00BCD4",
+        "textLink.foreground": "#00BCD4",
+        "progressBar.background": "#00BCD4",
+        "pickerGroup.foreground": "#00BCD4",
+        "tab.activeBorder": "#00BCD4"
+    },
+    // Python
+    "python.formatting.provider": "autopep8",
+    "python.linting.pylintArgs": [
+        "--disable=E1101, C0103, C0301, C0302, W0603, R1705, W0105"
+    ],
+    // Editor
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.renderLineHighlight": "all",
+    "editor.renderIndentGuides": true,
+    "editor.selectionHighlight": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.wordWrap": "off",
+    "editor.fontFamily": "'Fira Code', Monaco",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    // Terminal
+    "terminal.integrated.fontFamily": "'Fira Code', Monaco",
+    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontSize": 14,
+    // Python
+    "python.autoComplete.addBrackets": true,
+    "explorer.confirmDragAndDrop": false,
+    // HTML
+    "html.format.unformatted": "wbr, a, em, i, b, strong, span, code, sup, sub",
+}

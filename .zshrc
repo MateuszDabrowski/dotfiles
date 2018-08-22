@@ -37,6 +37,11 @@ alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files hidden'"
 
 #--------------------
+# Homebrew aliases
+#--------------------
+alias brewery="brew update && brew upgrade && brew cleanup"
+
+#--------------------
 # Gulp aliases
 #--------------------
 alias bSync="cd; cd Documents/Code/HTML/Workspace; gulp run; cd"

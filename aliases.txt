@@ -27,4 +27,4 @@ Commands
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
 - go <name>     [cd to target destinaton: py, md, elq, jup, mjml, html]
-- venv <name>   [cd to target and launch virtualenv: md; deactivate to close]
+- brewery	[updates, upgrades and cleans homebrew installs]
