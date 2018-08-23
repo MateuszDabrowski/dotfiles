@@ -26,8 +26,8 @@ alias aliases="cd; cd Documents/Code/Terminal; cat aliases.txt; cd"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../md; nano .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
-alias editAliases="cd; cd Documents/Code/Terminal; nano aliases.txt; git status"
+alias zshrc="cd; cd ../md; code .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
+alias editAliases="cd; cd Documents/Code/Terminal; code aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -91,7 +91,10 @@ function icon() {
 #------------------
 function go() {
     cd
-    if [ "$1" = py ]
+    if [ "$1" = code ]
+	then
+	    cd Documents/Code; ls
+    elif [ "$1" = py ]
         then
             cd Documents/Code/Python/
     elif [ "$1" = md ]

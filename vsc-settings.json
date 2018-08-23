@@ -26,7 +26,7 @@
     // Python
     "python.formatting.provider": "autopep8",
     "python.linting.pylintArgs": [
-        "--disable=E1101, C0103, C0301, C0302, W0603, R1705, W0105"
+        "--disable=E1101, C0103, C0301, C0302, C0414, W0603, R1705, W0105"
     ],
     // Editor
     "editor.minimap.enabled": false,
@@ -54,4 +54,14 @@
     "explorer.confirmDragAndDrop": false,
     // HTML
     "html.format.unformatted": "wbr, a, em, i, b, strong, span, code, sup, sub",
+    // Touchbar
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.goToDefinition": false,
+    "nasc-touchbar.goToNext": true,
+    "nasc-touchbar.selectNext": false,
+    "nasc-touchbar.jumpToBracket": true,
+    "nasc-touchbar.togglePanel": false,
+    "nasc-touchbar.copyLineDown": true,
+    "nasc-touchbar.toggleWhiteSpace": true,
+    "editor.renderWhitespace": "none",
 }

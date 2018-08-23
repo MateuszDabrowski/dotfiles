@@ -1,5 +1,5 @@
 # Config Files
-.zshrc && .gitconfig
+.zshrc && .gitconfig && vscode settings
 
 ## oh-my-zsh
 
