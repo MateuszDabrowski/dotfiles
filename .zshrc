@@ -96,21 +96,21 @@ function go() {
 	    cd Documents/Code; ls
     elif [ "$1" = py ]
         then
-            cd Documents/Code/Python/
+            cd Documents/Code/Python; ls
     elif [ "$1" = md ]
 	      then
-	          cd Documents/Code/HTML/mateuszdabrowski
+	          cd Documents/Code/HTML/mateuszdabrowski; ls
     elif [ "$1" = elq ]
         then
-            cd Documents/Code/Python/ELQuent
+            cd Documents/Code/Python/ELQuent; ls
     elif [ "$1" = jup ]
         then
-            cd Documents/Code/Python/Jupyter
+            cd Documents/Code/Python/Jupyter; ls
     elif [ "$1" = html ]
         then
-            cd Documents/Code/HTML/
+            cd Documents/Code/HTML; ls
     elif [ "$1" = mjml ]
         then
-            cd Documents/Code/MJML
+            cd Documents/Code/MJML; ls
     fi
 }
