@@ -24,3 +24,12 @@ $`brew install z`
 `brew tap caskroom/fonts`
 
 `brew cask install font-fira-code`
+
+## Powershell aliasing
+
+```cd C:\md\Documents
+md WindowsPowerShell -ErrorAction SilentlyContinue
+cd WindowsPowerShell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+New-Item Microsoft.PowerShell_profile.ps1 -ItemType "file" -ErrorAction SilentlyContinue
+powershell_ise.exe .\Microsoft.PowerShell_profile.ps1```
