@@ -1,0 +1,42 @@
+function code {
+    set-location Z:\VMShared\Code
+    ls
+}
+Set-Alias gocode code
+
+function elq {
+    set-location Z:\VMShared\Code\ELQuent
+    ls
+}
+Set-Alias goelq elq
+
+function home {
+    set-location C:\Users\md
+    ls
+}
+Set-Alias gohome home
+
+function desktop {
+    set-location C:\Users\md\Desktop
+    ls
+}
+Set-Alias godesk desktop
+
+function downloads {
+    set-location C:\Users\md\Downloads
+    ls
+}
+Set-Alias godl downloads
+
+function build-exe {
+    goelq
+    python setup.py build
+    cd build
+    Compress-Archive -Path "Z:\VMShared\Code\ELQuent\build\exe.win-amd64-3.6" -DestinationPath ("Z:\VMShared\Code\ELQuent\build\ELQuent " + (get-date -Format yyyyMMdd) + ".zip")
+    Copy-Item "Z:\VMShared\Code\ELQuent\build\exe.win-amd64-3.6" -Destination "C:\Users\md\Desktop" -Recurse
+    Rename-Item -path ‘C:\Users\md\Desktop\exe.win-amd64-3.6’ -newName ‘ELQuent’
+}
+Set-Alias elqbuild build-exe
+
+function Edit-Profile {powershell_ise.exe $profile}
+Set-Alias editprofile Edit-Profile
