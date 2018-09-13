@@ -14,6 +14,9 @@ Aliases:
 - pyApp		[cx_Freeze from setup.py]
 - elq		[launches elquent.py]
 - jup 		[launches jupyter lab]
+- pipery [updates all pippackages]
+
+- brewery	[updates all brew packages]
 
 - gitLog	[pretty git log --oneline with additional data]
 - gitSearch	[uses grep to search through git log (case insensitive)]

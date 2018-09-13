@@ -61,6 +61,7 @@ alias py="python3"
 alias jup="go jup;jupyter lab"
 alias pyApp="py setup.py build"
 alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
+alias pipery="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
 #--------------------
 # Icon creator
@@ -112,6 +113,9 @@ function go() {
     elif [ "$1" = mjml ]
         then
             cd Documents/Code/MJML; ls
+    elif [ "$1" = term ]
+        then
+            cd Documents/Code/Terminal; ls
     fi
 }
 
