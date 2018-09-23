@@ -1,4 +1,5 @@
 # Config Files
+
 .zshrc && .gitconfig && vscode settings
 
 ## oh-my-zsh
@@ -11,7 +12,6 @@
 
 @.zshrc: `source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
 
-
 ## z
 
 $`brew install z`
@@ -19,6 +19,7 @@ $`brew install z`
 @.zshrc: ``. `brew --prefix`/etc/profile.d/z.sh``
 
 ## font
+
 [Fira Code font](https://github.com/tonsky/FiraCode)
 
 `brew tap caskroom/fonts`

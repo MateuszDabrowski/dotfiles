@@ -60,6 +60,8 @@ alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset
 alias py="python3"
 alias jup="go jup;jupyter lab"
 alias pyApp="py setup.py build"
+alias elqPack="go vm;rm -R ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
+alias elqDist="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build; cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Aplikacje"
 alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
 alias pipery="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
@@ -116,6 +118,9 @@ function go() {
     elif [ "$1" = term ]
         then
             cd Documents/Code/Terminal; ls
+    elif [ "$1" = vm ]
+        then
+            cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
     fi
 }
 
