@@ -8,7 +8,8 @@ Aliases:
 
 - gulpIni	[initializes gulp instalation in current folder]
 - gulpInst	[allows fast install with "gulpInst gulp-package"]
-- bSync		[cd to website file and start gulp browser-sync]
+- hSync		[cd to website file and start gulp browser-sync]
+- jSync		[go to script file and start gulp browser-sync]
 
 - py		[shortcut for "python3"]
 - pyApp		[cx_Freeze from setup.py]
@@ -31,5 +32,5 @@ Commands
 - echo		[create file - "echo 'text'>file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     [cd to target destinaton: py, md, elq, jup, mjml, html, vm]
+- go <name>     [cd to target destinaton: py, js, md, elq, jup, mjml, html, vm]
 - brewery	[updates, upgrades and cleans homebrew installs]

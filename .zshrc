@@ -44,7 +44,6 @@ alias brewery="brew update && brew upgrade && brew cleanup"
 #--------------------
 # Gulp aliases
 #--------------------
-alias bSync="cd; cd Documents/Code/HTML/Workspace; gulp run; cd"
 alias gulpIni="npm install --global gulp-cli; npm install --save-dev gulp; npm init"
 alias gulpInst="npm install --save-dev"
 
@@ -100,6 +99,9 @@ function go() {
     elif [ "$1" = py ]
         then
             cd Documents/Code/Python; ls
+    elif [ "$1" = js ]
+        then
+            cd Documents/Code/JS; ls
     elif [ "$1" = md ]
 	      then
 	          cd Documents/Code/HTML/mateuszdabrowski; ls
@@ -121,6 +123,16 @@ function go() {
     elif [ "$1" = vm ]
         then
             cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
+    fi
+}
+
+function bSync() {
+    if [ "$1" = html ]
+	    then
+	        go html; gulp run;
+    elif [ "$1" = js ]
+        then
+            go js; gulp run;
     fi
 }
 
