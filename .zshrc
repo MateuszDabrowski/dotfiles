@@ -26,8 +26,8 @@ alias aliases="cat ~/Documents/Code/Terminal/aliases.txt;"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="cd; cd ../md; code .zshrc; cd; cd Documents/Code/Terminal; cp ~/.zshrc ~/Documents/Code/Terminal; git status; reload"
-alias editAliases="cd; cd Documents/Code/Terminal; code aliases.txt; git status"
+alias zshrc="code ~/.zshrc; go term; cp ~/.zshrc ~/Documents/Code/Terminal; reload; git status"
+alias editAliases="go term; code aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -63,7 +63,7 @@ alias jup="go jup;jupyter lab"
 alias pyApp="py setup.py build"
 alias elqPack="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
 alias elqDist="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build; cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Aplikacje"
-alias elq="cd; cd Documents/Code/Python/ELQuent/; py elquent.py"
+alias elq="go elq; py elquent.py"
 alias pipery="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
 #--------------------
