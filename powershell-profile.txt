@@ -30,6 +30,7 @@ Set-Alias godl downloads
 
 function build-exe {
     goelq
+    Remove-Item "Z:\VMShared\Code\ELQuent\build\exe.win-amd64-3.6" -Force -Recurse
     python setup.py build
     cd build
     Compress-Archive -Path "Z:\VMShared\Code\ELQuent\build\exe.win-amd64-3.6" -DestinationPath ("Z:\VMShared\Code\ELQuent\build\ELQuent " + (get-date -Format yyyyMMdd) + ".zip")

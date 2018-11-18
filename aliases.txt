@@ -13,11 +13,12 @@ Aliases:
 
 - py		[shortcut for "python3"]
 - pyApp		[cx_Freeze from setup.py]
-- elqPack	[prepares ELQuent for packing in VM]
-- elqDist	[moves ELQuent packages to appropriate folders]
+- elqPackPL	[prepares ELQuent PLver for packing in VM]
+- elqPackCORP	[prepares ELQuent CORPver for packing in VM]
+- elqUpload	[moves ELQuent packages to appropriate folders]
 - elq		[launches elquent.py]
 - jup 		[launches jupyter lab]
-- pipery [updates all pippackages]
+- pipery 	[updates all pippackages]
 
 - brewery	[updates all brew packages]
 
