@@ -1,6 +1,6 @@
 Aliases:
-- editAliases	[nano editing aliases.txt]
-- zshrc         [nano editing .zshrc]
+- editAliases	[vsc editing aliases.txt]
+- zshrc         [vsc editing .zshrc]
 - reload	[reload zshrc after changes]
 
 - showFiles 	[restarts Finder and show hidden files]
@@ -11,14 +11,15 @@ Aliases:
 - hSync		[cd to website file and start gulp browser-sync]
 - jSync		[go to script file and start gulp browser-sync]
 
-- py		[shortcut for "python3"]
+- py		[shortcut for "python3.7" - py2 for 2.7 - py3 for 3.6]
+- pip		[shortcut for "pip.7" - pip2 for 2.7 - pip3 for 3.6]
 - pyApp		[cx_Freeze from setup.py]
 - elqPackPL	[prepares ELQuent PLver for packing in VM]
 - elqPackCORP	[prepares ELQuent CORPver for packing in VM]
 - elqUpload	[moves ELQuent packages to appropriate folders]
 - elq		[launches elquent.py]
 - jup 		[launches jupyter lab]
-- pipery 	[updates all pippackages]
+- pipery 	[updates all pip3.7 packages - pipery2 for 2.7 - pipery3 for 3.6]
 
 - brewery	[updates all brew packages]
 

@@ -26,8 +26,8 @@ alias aliases="cat ~/Documents/Code/Terminal/aliases.txt;"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="code ~/.zshrc; go term; cp ~/.zshrc ~/Documents/Code/Terminal; reload; git status"
-alias editAliases="go term; code aliases.txt; git status"
+alias zshrc="code --wait ~/.zshrc; go term; cp ~/.zshrc ~/Documents/Code/Terminal; reload; git status"
+alias editAliases="go term; code --wait aliases.txt; git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -58,14 +58,21 @@ alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset
 #--------------------
 # Python aliases
 #--------------------
-alias py="python3"
+alias py="python3.7"
+alias py2="python2.7"
+alias py3="python3.6"
+alias pip="pip3.7"
+alias pip2="pip2.7"
+alias pip3="pip3.6"
 alias jup="go jup;jupyter lab"
 alias pyApp="py setup.py build"
 alias elqPackPL="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
 alias elqPackCORP="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm *.p"
 alias elqUpload="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build; cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Apps"
 alias elq="go elq; py elquent.py"
-alias pipery="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+alias pipery="pip3.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3.7 install -U"
+alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2.7 install -U"
+alias pipery3="pip3.6 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3.6 install -U"
 
 #--------------------
 # Icon creator
