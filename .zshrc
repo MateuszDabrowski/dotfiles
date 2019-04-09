@@ -1,6 +1,8 @@
 # SETTINGS
 
 export ZSH="/Users/md/.oh-my-zsh"
+# Anaconda3
+export PATH="/miniconda3/bin:$PATH"
 
 #-------------------------------------
 # BASIC CONFIGURATION
