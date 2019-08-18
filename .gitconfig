@@ -1,10 +1,10 @@
 [user]
     name = Mateusz Dąbrowski
-    email = md@prawo.cc
+	email = github@mateuszdabrowski.pl
     username = md
 [core]
     editor = code --wait
-    excludesfile = /Users/mateuszdabrowski/.gitignore_global
+    excludesfile = /Users/md/.gitignore_global
     pager = cat
 [web]
     browser = google-chrome
@@ -17,10 +17,12 @@
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 [commit]
-	template = /Users/mateuszdabrowski/.stCommitMsg
+	template = /Users/md/.stCommitMsg
     verbose = true
 [filter "lfs"]
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
+[credential]
+	helper = osxkeychain

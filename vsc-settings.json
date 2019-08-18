@@ -1,13 +1,13 @@
 {
     // Window
     "window.zoomLevel": -1,
+    "window.restoreWindows": "all",
     // Files
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     // Workbench
     "workbench.colorTheme": "Material Theme",
     "workbench.fontAliasing": "auto",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.editor.showIcons": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.feedback.visible": false,
@@ -34,11 +34,13 @@
     "editor.snippetSuggestions": "top",
     "editor.renderLineHighlight": "all",
     "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "selection",
     "editor.selectionHighlight": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.wordWrap": "off",
     "editor.fontFamily": "'Fira Code', Monaco",
+    "editor.fontWeight": "500",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.rulers": [
@@ -48,6 +50,7 @@
     // Terminal
     "terminal.integrated.fontFamily": "'Fira Code', Monaco",
     "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontWeight": "500",
     "terminal.integrated.fontSize": 14,
     // Python
     "python.autoComplete.addBrackets": true,
@@ -55,13 +58,12 @@
     // HTML
     "html.format.unformatted": "wbr, a, em, i, b, strong, span, code, sup, sub",
     // Touchbar
-    "nasc-touchbar.addCursorBelow": false,
     "nasc-touchbar.goToDefinition": false,
-    "nasc-touchbar.goToNext": true,
-    "nasc-touchbar.selectNext": false,
     "nasc-touchbar.jumpToBracket": true,
-    "nasc-touchbar.togglePanel": false,
-    "nasc-touchbar.copyLineDown": true,
     "nasc-touchbar.toggleWhiteSpace": true,
-    "editor.renderWhitespace": "none",
+    "nasc-touchbar.blockComment": true,
+    "nasc-touchbar.showCommands": false,
+    "nasc-touchbar.togglePanel": false,
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.goToNext": true
 }
