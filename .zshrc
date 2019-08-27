@@ -140,8 +140,13 @@ function go() {
     elif [ "$1" = vm ]
         then
             cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
+    elif [ "$1" = cs50 ]
+        then
+            cd Documents/Code/CS50; ls
     fi
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+export PATH=/Users/md/.local/bin:$PATH

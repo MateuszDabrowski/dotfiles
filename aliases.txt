@@ -34,5 +34,5 @@ Commands
 - echo		[create file - "echo 'text'>file.ext"]
 - perl		[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips		[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     [cd to target destinaton: py, js, md, elq, jup, mjml, html, vm]
+- go <name>     [cd to target destinaton: py, js, md, elq, jup, mjml, html, vm, cs50]
 - brewery	[updates, upgrades and cleans homebrew installs]
