@@ -10,7 +10,7 @@ export ZSH="/Users/md/.oh-my-zsh"
 export PATH="/usr/local/bin/python3.6:$PATH"
 
 # Miniconda 3.7.1
-export PATH="/miniconda3/bin:$PATH"
+export PATH="/Users/md/miniconda3/bin:$PATH"
 
 #-------------------------------------
 # BASIC CONFIGURATION
@@ -73,6 +73,7 @@ alias py2="python2.7"
 alias pip="pip3.6"
 alias pip2="pip2.7"
 alias jup="go jup;jupyter lab"
+alias jupKernel="go jup;jupyter kernelspec list"
 alias pyApp="py setup.py build"
 alias elqPackPL="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
 alias elqPackCORP="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm *.p"
@@ -147,6 +148,3 @@ function go() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-export PATH=/Users/md/.local/bin:$PATH
