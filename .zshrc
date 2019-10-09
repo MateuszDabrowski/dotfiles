@@ -9,8 +9,21 @@ export ZSH="/Users/md/.oh-my-zsh"
 # Python 3.6.6
 export PATH="/usr/local/bin/python3.6:$PATH"
 
-# Miniconda 3.7.1
-export PATH="/Users/md/miniconda3/bin:$PATH"
+# Miniconda 3.7.3
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/md/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/md/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/md/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/md/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 #-------------------------------------
 # BASIC CONFIGURATION
@@ -72,7 +85,7 @@ alias py="python3.6"
 alias py2="python2.7"
 alias pip="pip3.6"
 alias pip2="pip2.7"
-alias jup="go jup;jupyter lab"
+alias jup="go jup;conda activate;jupyter lab;conda deactivate"
 alias jupKernel="go jup;jupyter kernelspec list"
 alias pyApp="py setup.py build"
 alias elqPackPL="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
@@ -148,3 +161,4 @@ function go() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

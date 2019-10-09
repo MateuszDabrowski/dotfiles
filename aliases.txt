@@ -18,7 +18,7 @@ Aliases:
 - elqPackCORP	[prepares ELQuent CORPver for packing in VM]
 - elqUpload	[moves ELQuent packages to appropriate folders]
 - elq		[launches elquent.py]
-- jup 		[launches jupyter lab]
+- jup 		[launches jupyter lab in conda env]
 - jupKernel [lists kernels available in jupyter lab]
 - pipery 	[updates all pip3.6 packages]
 
