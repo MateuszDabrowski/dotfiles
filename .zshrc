@@ -115,7 +115,7 @@ function icon() {
             iconutil --convert icns $1.iconset
             rm -R $1.iconset
     else
-        echo Podaj nazwę pliku .icns
+        echo Provide .icns file name
     fi;
 }
 
@@ -125,8 +125,8 @@ function icon() {
 function go() {
     cd
     if [ "$1" = code ]
-	then
-	    cd Documents/Code; ls
+	    then
+	        cd Documents/Code; ls
     elif [ "$1" = py ]
         then
             cd Documents/Code/Python; ls
@@ -157,6 +157,18 @@ function go() {
     elif [ "$1" = cs50 ]
         then
             cd Documents/Code/CS50; ls
+    fi
+}
+
+#------------------
+# Find process
+#------------------
+function findProcess() {
+    if [ "$1" ]
+	    then
+	        ps -ax | grep $1
+    else
+        ps -ax
     fi
 }
 
