@@ -100,22 +100,56 @@ alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d 
 #--------------------
 function icon() {
     if [ -n "$1" ]
-        then
-            mkdir $1.iconset
-            sips -z 16 16     Icon.png --out $1.iconset/icon_16x16.png
-            sips -z 32 32     Icon.png --out $1.iconset/icon_16x16@2x.png
-            sips -z 32 32     Icon.png --out $1.iconset/icon_32x32.png
-            sips -z 64 64     Icon.png --out $1.iconset/icon_32x32@2x.png
-            sips -z 128 128   Icon.png --out $1.iconset/icon_128x128.png
-            sips -z 256 256   Icon.png --out $1.iconset/icon_128x128@2x.png
-            sips -z 256 256   Icon.png --out $1.iconset/icon_256x256.png
-            sips -z 512 512   Icon.png --out $1.iconset/icon_256x256@2x.png
-            sips -z 512 512   Icon.png --out $1.iconset/icon_512x512.png
-            cp Icon.png $1.iconset/icon_512x512@2x.png
-            iconutil --convert icns $1.iconset
-            rm -R $1.iconset
+    then
+        png=$(basename "$1")
+        iconset="${png%.*}.iconset"
+        mkdir "$iconset"
+
+        iconutil=$(which iconutil)
+        sips=$(which sips)
+
+        echo "Processing..."
+        $sips --resampleHeightWidth 16 16       "$1" --out "${iconset}/icon_16x16.png"      > /dev/null 2>&1
+        $sips --resampleHeightWidth 32 32       "$1" --out "${iconset}/icon_16x16@2x.png"   > /dev/null 2>&1
+        $sips --resampleHeightWidth 32 32       "$1" --out "${iconset}/icon_32x32.png"      > /dev/null 2>&1
+        $sips --resampleHeightWidth 64 64       "$1" --out "${iconset}/icon_32x32@2x.png"   > /dev/null 2>&1
+        $sips --resampleHeightWidth 128 128     "$1" --out "${iconset}/icon_128x128.png"    > /dev/null 2>&1
+        $sips --resampleHeightWidth 256 256     "$1" --out "${iconset}/icon_128x128@2x.png" > /dev/null 2>&1
+        $sips --resampleHeightWidth 256 256     "$1" --out "${iconset}/icon_256x256.png"    > /dev/null 2>&1
+        $sips --resampleHeightWidth 512 512     "$1" --out "${iconset}/icon_256x256@2x.png" > /dev/null 2>&1
+        $sips --resampleHeightWidth 512 512     "$1" --out "${iconset}/icon_512x512.png"    > /dev/null 2>&1
+        $sips --resampleHeightWidth 1024 1024   "$1" --out "${iconset}/icon_512x512@2x.png" > /dev/null 2>&1
+
+        $iconutil --convert icns --output "${iconset%.*}.icns" "$iconset"
+        echo -e "Output file:\t${iconset%.*}.icns"
+        rm -R "$iconset"
     else
         echo Provide .icns file name
+    fi;
+}
+
+
+
+function favicon() {
+    if [ -n "$1" ]
+    then
+        png=$(basename "$1")
+        favfolder="${png%.*}"
+        mkdir "$favfolder"
+
+        sips=$(which sips)
+
+        echo "Processing..."
+        $sips --resampleHeightWidth 16 16     "$1" --out "favicon/favicon_16.png"
+        $sips --resampleHeightWidth 32 32     "$1" --out "favicon/favicon_32.png"
+        $sips --resampleHeightWidth 128 128   "$1" --out "favicon/favicon_128.png"
+        $sips --resampleHeightWidth 152 152   "$1" --out "favicon/favicon_152.png"
+        $sips --resampleHeightWidth 167 167   "$1" --out "favicon/favicon_167.png"
+        $sips --resampleHeightWidth 180 180   "$1" --out "favicon/favicon_180.png"
+        $sips --resampleHeightWidth 192 192   "$1" --out "favicon/favicon_192.png"
+        $sips --resampleHeightWidth 196 196   "$1" --out "favicon/favicon_196.png"
+    else
+        echo Provide favicon file name
     fi;
 }
 
@@ -124,7 +158,10 @@ function icon() {
 #------------------
 function go() {
     cd
-    if [ "$1" = code ]
+    if [ "$1" = desk ]
+	    then
+	        cd Desktop; ls
+    elif [ "$1" = code ]
 	    then
 	        cd Documents/Code; ls
     elif [ "$1" = py ]
