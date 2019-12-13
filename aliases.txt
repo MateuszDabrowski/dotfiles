@@ -28,7 +28,7 @@ Aliases:
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
 - icon <name>		[creates name.icns file out of 1024x1024+ icon.png]
-- favicon <name>	[creates favicon folder out of 196x196+ favicon.png]
+- favicon <name>	[creates favicon folder out of 512x512+ favicon.png]
 
 Commands
 - rename		[replace file names - "rename -vs old new *"]

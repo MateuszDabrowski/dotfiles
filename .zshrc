@@ -146,8 +146,11 @@ function favicon() {
         $sips --resampleHeightWidth 152 152   "$1" --out "favicon/favicon_152.png"
         $sips --resampleHeightWidth 167 167   "$1" --out "favicon/favicon_167.png"
         $sips --resampleHeightWidth 180 180   "$1" --out "favicon/favicon_180.png"
-        $sips --resampleHeightWidth 192 192   "$1" --out "favicon/favicon_192.png"
+        $sips --resampleHeightWidth 192 192   "$1" --out "favicon/android-chrome-192x192.png"
         $sips --resampleHeightWidth 196 196   "$1" --out "favicon/favicon_196.png"
+        $sips --resampleHeightWidth 270 270   "$1" --out "favicon/favicon_270.png"
+        $sips --resampleHeightWidth 512 512   "$1" --out "favicon/android-chrome-512x512.png"
+        convert $png -resize 48x48 favicon/favicon.ico
     else
         echo Provide favicon file name
     fi;
