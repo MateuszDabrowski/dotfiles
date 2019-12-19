@@ -96,6 +96,11 @@ alias pipery="pip3.6 list --outdated --format=freeze | grep -v '^\-e' | cut -d =
 alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2.7 install -U"
 
 #--------------------
+# Other aliases
+#--------------------
+alias resetTouchBar="pkill 'Touch Bar agent';killall 'ControlStrip';"
+
+#--------------------
 # Icon creator
 #--------------------
 function icon() {

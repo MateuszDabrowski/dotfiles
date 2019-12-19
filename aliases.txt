@@ -24,6 +24,8 @@ Aliases:
 
 - brewery		[updates all brew packages]
 
+- resetTouchBar		[restarts whole Touch Bar]
+
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
@@ -37,5 +39,5 @@ Commands
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
 - go <name>     	[cd to target destinaton: desk, code, py, js, md, elq, jup, mjml, html, vm, cs50]
-- findProcess <name> 	[returns processes with PID for provided name]
+- findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
 - brewery		[updates, upgrades and cleans homebrew installs]
