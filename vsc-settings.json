@@ -70,5 +70,10 @@
     "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "eslint.run": "onSave",
-    "problems.showCurrentInStatus": true
+    "problems.showCurrentInStatus": true,
+    // Emmet
+    "emmet.triggerExpansionOnTab": true,
+    // Open in Browser
+    "open-php-html-js-in-browser.selectedBrowser": "Ask always...",
+    "open-php-html-js-in-browser.rememberBrowserSelection": false
 }
