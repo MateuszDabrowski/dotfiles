@@ -99,6 +99,7 @@ alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d 
 # Other aliases
 #--------------------
 alias resetTouchBar="pkill 'Touch Bar agent';killall 'ControlStrip';"
+alias webp="find ./ -type f -name '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless $1 -o "${1%.png}.webp"' _ {} \;"
 
 #--------------------
 # Icon creator

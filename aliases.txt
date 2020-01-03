@@ -29,6 +29,7 @@ Aliases:
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
+- webp			[creates .webp version of all .png images in pwd]
 - icon <name>		[creates name.icns file out of 1024x1024+ icon.png]
 - favicon <name>	[creates favicon folder out of 512x512+ favicon.png]
 
