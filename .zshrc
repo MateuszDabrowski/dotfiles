@@ -99,7 +99,7 @@ alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d 
 # Other aliases
 #--------------------
 alias resetTouchBar="pkill 'Touch Bar agent';killall 'ControlStrip';"
-alias webp="find ./ -type f -name '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless $1 -o "${1%.png}.webp"' _ {} \;"
+alias webp="find ./ -type f -name '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
 
 #--------------------
 # Icon creator
@@ -182,6 +182,9 @@ function go() {
     elif [ "$1" = md ]
 	      then
 	          cd Documents/Code/HTML/mateuszdabrowski; ls
+    elif [ "$1" = aipp ]
+	      then
+	          cd Documents/Code/HTML/aipp; ls
     elif [ "$1" = elq ]
         then
             cd Documents/Code/Python/ELQuent; ls
@@ -200,9 +203,6 @@ function go() {
     elif [ "$1" = vm ]
         then
             cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
-    elif [ "$1" = cs50 ]
-        then
-            cd Documents/Code/CS50; ls
     fi
 }
 
