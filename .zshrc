@@ -99,11 +99,66 @@ alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d 
 # Other aliases
 #--------------------
 alias resetTouchBar="pkill 'Touch Bar agent';killall 'ControlStrip';"
-alias webp="find ./ -type f -name '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
+alias png2webp="find ./ -type f -iname '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
+alias jpg2webp="find ./ -type f -iname '*.jpg' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.jpg}.webp\"' _ {} \;"
 
 #--------------------
-# Icon creator
+# Image creation and modification
 #--------------------
+
+function prepImages() {
+    if [ -n "$1" ]
+        then
+            res2x="$1"
+            res1x=$(( res2x / 2 ))
+            thumb1x=$(( res1x / 2 ))
+
+            mkdir -p original
+            cp *.jpg ./original
+            echo "» Creating 2x images ($res2x px)"
+            mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $res2x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
+            for file in *.jpg; do
+                base="${file%.*}"
+                mv "$file" "$base-2x.jpg"
+                cwebp -lossless "$base-2x.jpg" -o "$base-2x.webp"
+            done
+            mkdir -p 2x
+            mv *.jpg *.webp ./2x
+            echo "» Creating 1x images ($res1x px)"
+            cp ./original/* ./
+            mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $res1x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
+            for file in *.jpg; do
+                base="${file%.*}"
+                mv "$file" "$base-1x.jpg"
+                cwebp -lossless "$base-1x.jpg" -o "$base-1x.webp"
+            done
+            mkdir -p 1x
+            cp *.jpg ./1x
+            mv *.webp ./1x
+            echo "» Creating 2x thumbs ($res1x px)"
+            for file in *.jpg; do
+                base="${file%-1x.*}"
+                mv "$file" "$base-thumb-2x.jpg"
+                cwebp -lossless "$base-thumb-2x.jpg" -o "$base-thumb-2x.webp"
+            done
+            mkdir -p thumb-2x
+            mv *.jpg *.webp ./thumb-2x
+            echo "» Creating 1x thumbs ($thumb1x px)"
+            cp ./original/* ./
+            mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $thumb1x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
+            for file in *.jpg; do
+                base="${file%.*}"
+                mv "$file" "$base-thumb-1x.jpg"
+                cwebp -lossless "$base-thumb-1x.jpg" -o "$base-thumb-1x.webp"
+            done
+            mkdir -p thumb-1x
+            mv *.jpg *.webp ./thumb-1x
+            echo "» Created .jpg and .webp in: $res2x px, $res1x px, $thumb1x px"
+    else
+        echo "» Provide resolution for 2x image"
+    fi;
+}
+
 function icon() {
     if [ -n "$1" ]
     then
@@ -130,11 +185,9 @@ function icon() {
         echo -e "Output file:\t${iconset%.*}.icns"
         rm -R "$iconset"
     else
-        echo Provide .icns file name
+        echo "» Provide .icns file name"
     fi;
 }
-
-
 
 function favicon() {
     if [ -n "$1" ]
@@ -158,7 +211,7 @@ function favicon() {
         $sips --resampleHeightWidth 512 512   "$1" --out "favicon/android-chrome-512x512.png"
         convert $png -resize 48x48 favicon/favicon.ico
     else
-        echo Provide favicon file name
+        echo "» Provide favicon file name"
     fi;
 }
 
