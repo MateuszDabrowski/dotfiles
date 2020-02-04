@@ -114,7 +114,9 @@ function prepImages() {
             thumb1x=$(( res1x / 2 ))
 
             mkdir -p original
+            mkdir -p temp
             cp *.jpg ./original
+            cp *.jpg ./temp
             echo "» Creating 2x images ($res2x px)"
             mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $res2x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
             for file in *.jpg; do
@@ -125,7 +127,7 @@ function prepImages() {
             mkdir -p 2x
             mv *.jpg *.webp ./2x
             echo "» Creating 1x images ($res1x px)"
-            cp ./original/* ./
+            cp ./temp/* ./
             mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $res1x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
             for file in *.jpg; do
                 base="${file%.*}"
@@ -144,7 +146,7 @@ function prepImages() {
             mkdir -p thumb-2x
             mv *.jpg *.webp ./thumb-2x
             echo "» Creating 1x thumbs ($thumb1x px)"
-            cp ./original/* ./
+            cp ./temp/* ./
             mogrify -path ./ -filter Triangle -define filter:support=2 -thumbnail $thumb1x -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB *.jpg
             for file in *.jpg; do
                 base="${file%.*}"
@@ -154,6 +156,7 @@ function prepImages() {
             mkdir -p thumb-1x
             mv *.jpg *.webp ./thumb-1x
             echo "» Created .jpg and .webp in: $res2x px, $res1x px, $thumb1x px"
+            rm -R temp
     else
         echo "» Provide resolution for 2x image"
     fi;
