@@ -75,6 +75,18 @@ alias gulpInst="npm install --save-dev"
 #--------------------
 # Git aliases
 #--------------------
+alias gs="git status"
+alias gadd="git add"
+alias gall="git add --all; gs"
+function gcom() {
+    if [ -n "$1" ]
+        then
+            git commit -m "$1"
+            gitLog 5
+    fi;
+}
+alias gpush="git push origin master"
+alias gphm="git push heroku master"
 alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
 alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(yellow)%an%C(reset) › %C(white)%s%C(reset) %C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)' --reverse | grep -i"
 
