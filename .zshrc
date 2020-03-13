@@ -76,13 +76,14 @@ alias gulpInst="npm install --save-dev"
 # Git aliases
 #--------------------
 alias gs="git status"
+alias gdiff="git diff"
 alias gadd="git add"
 alias gall="git add --all; gs"
 function gcom() {
     if [ -n "$1" ]
         then
             git commit -m "$1"
-            gitLog 5
+            gitLog -3
     fi;
 }
 alias gpush="git push origin master"
