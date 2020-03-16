@@ -35,15 +35,21 @@
     "editor.selectionHighlight": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.wordWrap": "off",
     "editor.fontFamily": "'Fira Code', Monaco",
     "editor.fontWeight": "500",
     "editor.fontLigatures": true,
+    "editor.colorDecorators": false,
     "editor.fontSize": 14,
+    "editor.maxTokenizationLineLength": 40000,
     "editor.rulers": [
         80,
         120
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     // Terminal
     "terminal.integrated.fontFamily": "'Fira Code', Monaco",
     "terminal.integrated.fontLigatures": true,
@@ -71,9 +77,23 @@
     "eslint.format.enable": true,
     "eslint.run": "onSave",
     "problems.showCurrentInStatus": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     // Emmet
     "emmet.triggerExpansionOnTab": true,
     // Open in Browser
-    "open-php-html-js-in-browser.selectedBrowser": "Ask always...",
-    "open-php-html-js-in-browser.rememberBrowserSelection": false
+    "open-php-html-js-in-browser.selectedBrowser": "",
+    "open-php-html-js-in-browser.rememberBrowserSelection": false,
+    // ToDo
+    "todo-tree.tree.showScanModeButton": false,
+    // Formatting
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
 }
