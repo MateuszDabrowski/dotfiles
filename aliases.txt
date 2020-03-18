@@ -26,6 +26,10 @@ Aliases:
 
 - resetTouchBar		[restarts whole Touch Bar]
 
+- gs			[git status]
+- gall			[git add -all; git status]
+- gpush			[git push origin master]
+- gphm			[git push heroku master]
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
