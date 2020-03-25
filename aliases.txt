@@ -6,10 +6,8 @@ Aliases:
 - showFiles 		[restarts Finder and show hidden files]
 - hideFiles 		[restarts Finder and hide hidden files]
 
-- gulpIni		[initializes gulp instalation in current folder]
-- gulpInst		[allows fast install with "gulpInst gulp-package"]
-- hSync			[cd to website file and start gulp browser-sync]
-- jSync			[go to script file and start gulp browser-sync]
+- parcelInit		[initializes parcel instalation in current folder]
+- parcelStart		[runs parcel with "npm start"]
 
 - py			[shortcut for "python3.6"]
 - pip			[shortcut for "pip3.6"]

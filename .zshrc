@@ -49,15 +49,15 @@ alias aliases="cat ~/Documents/Code/Terminal/aliases.txt;"
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="code --wait ~/.zshrc; go term; cp ~/.zshrc ~/Documents/Code/Terminal; reload; git status"
-alias editAliases="go term; code --wait aliases.txt; git status"
+alias zshrc="code --wait ~/.zshrc && go term && cp ~/.zshrc ~/Documents/Code/Terminal && reload && git status"
+alias editAliases="go term && code --wait aliases.txt && git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
 # Show/Hide files
 #--------------------
-alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files visible'"
-alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files hidden'"
+alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files visible'"
+alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files hidden'"
 
 #--------------------
 # Homebrew aliases
@@ -65,12 +65,11 @@ alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias brewery="brew update && brew upgrade && brew cleanup"
 
 #--------------------
-# Gulp aliases
+# Parcel aliases
 #--------------------
-alias hSync="go html; gulp run"
-alias jSync="go js; gulp run"
-alias gulpIni="npm install --global gulp-cli; npm install --save-dev gulp; npm init"
-alias gulpInst="npm install --save-dev"
+
+alias parcelInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'"}' && npm install parcel-bundler --save-dev && npm audit fix"
+alias parcelStart="npm start"
 
 #--------------------
 # Git aliases
@@ -78,7 +77,7 @@ alias gulpInst="npm install --save-dev"
 alias gs="git status"
 alias gdiff="git diff"
 alias gadd="git add"
-alias gall="git add --all; gs"
+alias gall="git add --all && gs"
 function gcom() {
     if [ -n "$1" ]
         then
@@ -98,20 +97,20 @@ alias py="python3.6"
 alias py2="python2.7"
 alias pip="pip3.6"
 alias pip2="pip2.7"
-alias jup="go jup;conda activate;jupyter lab;conda deactivate"
-alias jupKernel="go jup;jupyter kernelspec list"
+alias jup="go jup && conda activate && jupyter lab && conda deactivate"
+alias jupKernel="go jup && jupyter kernelspec list"
 alias pyApp="py setup.py build"
-alias elqPackPL="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm eloqua.p"
-alias elqPackCORP="go vm;rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent;cd Elquent/utils/api;rm *.p"
-alias elqUpload="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build; cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Apps"
-alias elq="go elq; py elquent.py"
+alias elqPackPL="go vm && rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent &&cd Elquent/utils/api && rm eloqua.p"
+alias elqPackCORP="go vm && rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent && cd Elquent/utils/api && rm *.p"
+alias elqUpload="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build && cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Apps"
+alias elq="go elq && py elquent.py"
 alias pipery="pip3.6 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3.6 install -U"
 alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2.7 install -U"
 
 #--------------------
 # Other aliases
 #--------------------
-alias resetTouchBar="pkill 'Touch Bar agent';killall 'ControlStrip';"
+alias resetTouchBar="pkill 'Touch Bar agent' && killall 'ControlStrip';"
 alias png2webp="find ./ -type f -iname '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
 alias jpg2webp="find ./ -type f -iname '*.jpg' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.jpg}.webp\"' _ {} \;"
 
@@ -284,7 +283,7 @@ function findProcess() {
 	        ps -ax | grep $1
     else
         ps -ax
-    fi
+    fi;
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
