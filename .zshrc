@@ -68,8 +68,9 @@ alias brewery="brew update && brew upgrade && brew cleanup"
 # Parcel aliases
 #--------------------
 
-alias parcelInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'"}' && npm install parcel-bundler --save-dev && npm audit fix"
-alias parcelStart="npm start"
+alias pInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'","'"'"build"'"'": "'"'"parcel build index.html"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'">0.5%"'"'", "'"'"not ie 11"'"'", "'"'"not op_mini all"'"'", "'"'"not dead"'"'"]' && npm install parcel-bundler --save-dev && npm audit fix"
+alias pStart="npm start || echo 'Check whether you have index.html file in folder or update start script value in package.json'"
+alias pBuild="npm run build ||  echo 'Check whether you have index.html file in folder or update build script value in package.json'"
 
 #--------------------
 # Git aliases

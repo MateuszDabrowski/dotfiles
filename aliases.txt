@@ -6,8 +6,9 @@ Aliases:
 - showFiles 		[restarts Finder and show hidden files]
 - hideFiles 		[restarts Finder and hide hidden files]
 
-- parcelInit		[initializes parcel instalation in current folder]
-- parcelStart		[runs parcel with "npm start"]
+- pInit			[initializes parcel instalation in current folder]
+- pStart		[runs parcel with "npm start"]
+- pBuild		[builds parcel with "npm run build"]
 
 - py			[shortcut for "python3.6"]
 - pip			[shortcut for "pip3.6"]
