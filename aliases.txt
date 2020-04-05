@@ -10,6 +10,9 @@ Aliases:
 - pStart		[runs parcel with "npm start"]
 - pBuild		[builds parcel with "npm run build"]
 
+- mongoStart	[Starts MongoDB as a Service]
+- mongoStop		[Stops MongoDb as a Service]
+
 - py			[shortcut for "python3.6"]
 - pip			[shortcut for "pip3.6"]
 - pyApp			[cx_Freeze from setup.py]
