@@ -6,9 +6,13 @@ Aliases:
 - showFiles 		[restarts Finder and show hidden files]
 - hideFiles 		[restarts Finder and hide hidden files]
 
-- pInit			[initializes parcel instalation in current folder]
+- pInit			[initializes parcel installation in current folder]
 - pStart		[runs parcel with "npm start"]
 - pBuild		[builds parcel with "npm run build"]
+
+- nInit			[initializes node package installation in current folder]
+- nStart		[runs node server with "npm start"]
+- nDev		[runs nodemon with "npm run dev"]
 
 - mongoStart	[Starts MongoDB as a Service]
 - mongoStop		[Stops MongoDb as a Service]
@@ -47,7 +51,7 @@ Commands
 - echo			[create file - "echo 'text'>file.ext"]
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     	[cd to target destinaton: desk, code, py, js, md, aipp, elq, jup, mjml, html, vm]
+- go <name>     	[cd to target destination: desk, code, py, js, md, aipp, elq, jup, mjml, html, vm]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
 - brewery		[updates, upgrades and cleans homebrew installs]
 - mackup backup	[backs up dotfiles to icloud]

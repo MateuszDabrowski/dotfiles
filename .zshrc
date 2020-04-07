@@ -70,7 +70,15 @@ alias brewery="brew update && brew upgrade && brew cleanup"
 
 alias pInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'","'"'"build"'"'": "'"'"parcel build index.html"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'">0.5%"'"'", "'"'"not ie 11"'"'", "'"'"not op_mini all"'"'", "'"'"not dead"'"'"]' && npm i parcel-bundler -D && npm audit fix"
 alias pStart="npm start || echo 'Check whether you have index.html file in folder or update start script value in package.json'"
-alias pBuild="npm run build ||  echo 'Check whether you have index.html file in folder or update build script value in package.json'"
+alias pBuild="npm run build || echo 'Check whether you have index.html file in folder or update build script value in package.json'"
+
+#--------------------
+# NodeJS aliases
+#--------------------
+
+alias nInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"node app.js"'"'","'"'"dev"'"'": "'"'"nodemon app.js"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'"last 2 chrome versions"'"'"]' && json -I -f package.json -e 'this.type="'"'"module"'"'"' && json -I -f package.json -e 'this.main="'"'"app.js"'"'"' && json -I -f package.json -e 'this.author="'"'"Mateusz Dąbrowski"'"'"' && npm i -S express && npm i -D nodemon && npm audit fix && (echo node_modules && echo .env) > .gitignore && (echo import express from \'express\'\; && echo const app = express\(\)\; const port = 3000\; && echo && echo app.get\(\'\/\', \(req, res\) \=\> res.send\(\'Hello World\!\'\)\)\; app.listen\(port, \(\) \=\> console.log\(\`Example app listening at http:\/\/localhost:\$\{port\}\`\)\)\;) > app.js && git init"
+alias nStart="open http://localhost:3000 && npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
+alias nDev="open http://localhost:3000 && npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
 
 #--------------------
 # Mongo aliases
@@ -83,6 +91,8 @@ alias mongoStop="brew services stop mongodb-community || brew services list"
 # Git aliases
 #--------------------
 alias gs="git status"
+alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
+alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(yellow)%an%C(reset) › %C(white)%s%C(reset) %C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)' --reverse | grep -i"
 alias gdiff="git diff"
 alias gadd="git add"
 alias gall="git add --all && gs"
@@ -95,8 +105,6 @@ function gcom() {
 }
 alias gpush="git push origin master"
 alias gphm="git push heroku master"
-alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
-alias gitSearch="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(yellow)%an%C(reset) › %C(white)%s%C(reset) %C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)' --reverse | grep -i"
 
 #--------------------
 # Python aliases
