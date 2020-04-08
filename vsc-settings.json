@@ -51,6 +51,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    "color-highlight.markRuler": false,
     // Terminal
     "terminal.integrated.fontFamily": "'Fira Code', Monaco",
     "terminal.integrated.fontLigatures": true,
@@ -83,9 +84,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     // Emmet
     "emmet.triggerExpansionOnTab": true,
-    // Open in Browser
-    "open-php-html-js-in-browser.selectedBrowser": "",
-    "open-php-html-js-in-browser.rememberBrowserSelection": false,
     // ToDo
     "todo-tree.tree.showScanModeButton": false,
     // Formatting
@@ -95,9 +93,22 @@
     "[javascriptreact]": {
         "editor.formatOnSave": false
     },
+    "[typescript]": {
+        "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": false
+    },
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    // Spellchecking
     "cSpell.userWords": [
         "Ahoj",
         "Dąbrowski",
@@ -111,5 +122,6 @@
         "shortcut"
     ],
     "cSpell.language": "en-GB",
-    "color-highlight.markRuler": false,
+    // LiveServer
+    "liveServer.settings.donotShowInfoMsg": true,
 }
