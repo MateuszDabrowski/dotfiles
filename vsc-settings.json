@@ -9,6 +9,7 @@
     "files.trimTrailingWhitespace": true,
     // Workbench
     "workbench.colorTheme": "Material Theme Darker",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.fontAliasing": "auto",
     "workbench.editor.showIcons": true,
     "workbench.startupEditor": "newUntitledFile",
@@ -79,6 +80,7 @@
     "problems.showCurrentInStatus": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
     // Emmet
     "emmet.triggerExpansionOnTab": true,
     // Open in Browser
@@ -96,4 +98,18 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    "cSpell.userWords": [
+        "Ahoj",
+        "Dąbrowski",
+        "Mateusz",
+        "Middlewares",
+        "browserslist",
+        "eloqua",
+        "favicon",
+        "heroku",
+        "optin",
+        "shortcut"
+    ],
+    "cSpell.language": "en-GB",
+    "color-highlight.markRuler": false,
 }
