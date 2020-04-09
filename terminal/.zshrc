@@ -44,13 +44,13 @@ setopt auto_cd
 #--------------------
 # Show alias list
 #--------------------
-alias aliases="cat ~/Documents/Code/Terminal/aliases.txt;"
+alias aliases="cat ~/Documents/Code/Dotfiles/terminal/aliases.txt;"
 
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
-alias zshrc="code --wait ~/.zshrc && go term && cp ~/.zshrc ~/Documents/Code/Terminal && reload && git status"
-alias editAliases="go term && code --wait aliases.txt && git status"
+alias zshrc="code --wait ~/.zshrc && go dot && cp ~/.zshrc ~/Documents/Code/Dotfiles/terminal && reload && go dot && git status"
+alias editAliases="go dot && cd terminal && code --wait aliases.txt && go dot && git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 
 #--------------------
@@ -76,9 +76,18 @@ alias pBuild="npm run build || echo 'Check whether you have index.html file in f
 # NodeJS aliases
 #--------------------
 
-alias nInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"node app.js"'"'","'"'"dev"'"'": "'"'"nodemon app.js"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'"last 2 chrome versions"'"'"]' && json -I -f package.json -e 'this.type="'"'"module"'"'"' && json -I -f package.json -e 'this.main="'"'"app.js"'"'"' && json -I -f package.json -e 'this.author="'"'"Mateusz Dąbrowski"'"'"' && npm i -S express && npm i -D nodemon && npm audit fix && (echo node_modules && echo .env) > .gitignore && (echo import express from \'express\'\; && echo const app = express\(\)\; const port = 3000\; && echo && echo app.get\(\'\/\', \(req, res\) \=\> res.send\(\'Hello World\!\'\)\)\; app.listen\(port, \(\) \=\> console.log\(\`Example app listening at http:\/\/localhost:\$\{port\}\`\)\)\;) > app.js && git init"
-alias nStart="open http://localhost:3000 && npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
-alias nDev="open http://localhost:3000 && npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
+alias nInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"node app.js"'"'","'"'"dev"'"'": "'"'"nodemon app.js"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'"last 2 chrome versions"'"'"]' && json -I -f package.json -e 'this.type="'"'"module"'"'"' && json -I -f package.json -e 'this.main="'"'"app.js"'"'"' && json -I -f package.json -e 'this.author="'"'"Mateusz Dąbrowski"'"'"' && npm i -S express dotenv mongoose && npm i -D nodemon && npm audit fix && (echo node_modules && echo .env) > .gitignore && echo DB_CONNECT= > .env && mkdir routes && mkdir models && git init"
+alias nStart="( sleep 1 && open http://localhost:3000 ) & npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
+alias nDev="( sleep 1 && open http://localhost:3000 ) & npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
+
+#--------------------
+# NPM aliases
+#--------------------
+
+alias nis="npm i -S"
+alias nid="npm i -D"
+alias nListG="npm list -g --depth=0"
+alias nList="npm list --depth=0"
 
 #--------------------
 # Mongo aliases
@@ -281,13 +290,55 @@ function go() {
     elif [ "$1" = mjml ]
         then
             cd Documents/Code/MJML; ls
-    elif [ "$1" = term ]
+    elif [ "$1" = dot ]
         then
-            cd Documents/Code/Terminal; ls
+            cd Documents/Code/Dotfiles; ls
+    elif [ "$1" = mern ]
+        then
+            cd Documents/Code/MERN; ls
+    elif [ "$1" = tools ]
+        then
+            cd Documents/Code/Tools; ls
     elif [ "$1" = vm ]
         then
             cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
     fi
+}
+
+function lh() {
+    if [ "$1" ]
+    then
+        if [ "$1" = s ]
+        then
+            if [ "$2" ]
+            then
+                open /Applications/Safari.app http://localhost:$2
+            else
+                open /Applications/Safari.app http://localhost:3000
+            fi;
+        elif [ "$1" = c ]
+        then
+            if [ "$2" ]
+            then
+                open /Applications/Google\ Chrome.app http://localhost:$2
+            else
+                open /Applications/Google\ Chrome.app http://localhost:3000
+            fi;
+        elif [ "$1" = f ]
+        then
+            if [ "$2" ]
+            then
+                open /Applications/Firefox\ Developer\ Edition.app http://localhost:$2
+            else
+                open /Applications/Firefox\ Developer\ Edition.app http://localhost:3000
+            fi;
+        elif [ "$1" ]
+        then
+            open http://localhost:$1
+        fi;
+    else
+        open http://localhost:3000
+    fi;
 }
 
 #------------------
