@@ -10,12 +10,15 @@ Aliases:
 - pStart		[runs parcel with "npm start"]
 - pBuild		[builds parcel with "npm run build"]
 
-- nInit			[initializes node package installation in current folder]
+- nInit			[initializes MERN package in pwd]
 - nStart		[runs node server with "npm start"]
 - nDev			[runs nodemon with "npm run dev"]
+- nList			[lists all npm modules in pwd]
+- nListG		[lists all global npm modules]
+- nClean		[removes package-lock.json and node_modules from pwd]
+- nis			[npm install --save]
+- nid			[npm install --save-dev]
 
--nis			[npm install --save]
--nid			[npm install --save-dev]
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 

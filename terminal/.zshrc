@@ -73,21 +73,52 @@ alias pStart="npm start || echo 'Check whether you have index.html file in folde
 alias pBuild="npm run build || echo 'Check whether you have index.html file in folder or update build script value in package.json'"
 
 #--------------------
-# NodeJS aliases
-#--------------------
-
-alias nInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"node app.js"'"'","'"'"dev"'"'": "'"'"nodemon app.js"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'"last 2 chrome versions"'"'"]' && json -I -f package.json -e 'this.type="'"'"module"'"'"' && json -I -f package.json -e 'this.main="'"'"app.js"'"'"' && json -I -f package.json -e 'this.author="'"'"Mateusz Dąbrowski"'"'"' && npm i -S express dotenv mongoose && npm i -D nodemon && npm audit fix && (echo node_modules && echo .env) > .gitignore && echo DB_CONNECT= > .env && mkdir routes && mkdir models && git init"
-alias nStart="( sleep 1 && open http://localhost:3000 ) & npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
-alias nDev="( sleep 1 && open http://localhost:3000 ) & npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
-
-#--------------------
 # NPM aliases
 #--------------------
 
-alias nis="npm i -S"
-alias nid="npm i -D"
+function nInit() {
+    # Create NodeJS Server
+    npm init -y || npm init
+    # Install basic packages for NodeJS
+    npm i -S express dotenv mongoose concurrently
+    npm i -D nodemon
+    # Install pre-configured eslint for NodeJS
+    nil
+    # Update package.json for NodeJS
+    json -I -f package.json -e 'this.scripts={"'"start"'": "'"node server.js"'","'"server"'": "'"nodemon server.js"'", "'"client-install"'": "'"npm i --prefix client"'", "'"client"'": "'"npm start --prefix client"'", "'"dev"'": "'"concurrently \\\"npm run server\\\" \\\"npm run client\\\""'"}'
+    json -I -f package.json -e 'this.type="'"module"'"'
+    json -I -f package.json -e 'this.main="'"server.js"'"'
+    json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
+    # Create .env with initial content
+    echo DB_CONNECT= > .env
+    # Create folder structure
+    mkdir -p routes/api models client
+    # Make initial files
+    touch server.js ./routes/api/items.js ./models/ItemSchema.js
+    # Create React App
+    cd client/
+    npx create-react-app .
+    # Install pre-configured eslint for React
+    nil
+    # Update package.json for React
+    json -I -f package.json -e 'this.type="'"module"'"'
+    json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
+    json -I -f package.json -e 'this.proxy="'"http://localhost:5000"'"'
+    cd ../
+    # Create .gitignore with basic exclusions
+    (echo node_modules && echo .env) > .gitignore
+    # Launch git
+    git init
+}
+alias nStart="( sleep 1 && open http://localhost:3000 ) & npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
+alias nDev="( sleep 1 && open http://localhost:3000 ) & npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
+
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
+alias nClean="rm package-lock.json && rm -R node_modules"
+alias nil="npx install-peerdeps eslint-config-md@latest --dev"
+alias nis="npm i -S"
+alias nid="npm i -D"
 
 #--------------------
 # Mongo aliases
@@ -354,4 +385,3 @@ function findProcess() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
