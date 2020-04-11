@@ -8,8 +8,8 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     // Workbench
-    "workbench.colorTheme": "Material Theme Darker",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.fontAliasing": "auto",
     "workbench.editor.showIcons": true,
     "workbench.startupEditor": "newUntitledFile",
@@ -48,9 +48,6 @@
         80,
         120
     ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
     "color-highlight.markRuler": false,
     // Terminal
     "terminal.integrated.fontFamily": "'Fira Code', Monaco",
@@ -78,6 +75,14 @@
     "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "eslint.run": "onSave",
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     "problems.showCurrentInStatus": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -102,26 +107,6 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "prettier.disableLanguages": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    // Spellchecking
-    "cSpell.userWords": [
-        "Ahoj",
-        "Dąbrowski",
-        "Mateusz",
-        "Middlewares",
-        "browserslist",
-        "eloqua",
-        "favicon",
-        "heroku",
-        "optin",
-        "shortcut"
-    ],
-    "cSpell.language": "en-GB",
     // LiveServer
     "liveServer.settings.donotShowInfoMsg": true,
 }

@@ -80,7 +80,7 @@ function nInit() {
     # Create NodeJS Server
     npm init -y || npm init
     # Install basic packages for NodeJS
-    npm i -S express dotenv mongoose concurrently
+    npm i -S axios concurrently dotenv express mongoose
     npm i -D nodemon
     # Install pre-configured eslint for NodeJS
     nil
@@ -98,8 +98,8 @@ function nInit() {
     # Create React App
     cd client/
     npx create-react-app .
-    # Install pre-configured eslint for React
-    nil
+    rm README.md
+    mkdir -p src/components
     # Update package.json for React
     json -I -f package.json -e 'this.type="'"module"'"'
     json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
@@ -312,6 +312,9 @@ function go() {
     elif [ "$1" = elq ]
         then
             cd Documents/Code/Python/ELQuent; ls
+    elif [ "$1" = elq2 ]
+        then
+            cd Documents/Code/MERN/elquent-js; ls
     elif [ "$1" = jup ]
         then
             cd Documents/Code/Python/Jupyter; ls
