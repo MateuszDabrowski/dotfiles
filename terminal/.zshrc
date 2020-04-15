@@ -116,9 +116,11 @@ alias nDev="( sleep 1 && open http://localhost:3000 ) & npm run dev || echo 'Che
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
 alias nClean="rm package-lock.json && rm -R node_modules"
+alias ncr="npx create-react-app ."
 alias nil="npx install-peerdeps eslint-config-md@latest --dev"
 alias nis="npm i -S"
 alias nid="npm i -D"
+alias nrd="npm run dev"
 
 #--------------------
 # Mongo aliases

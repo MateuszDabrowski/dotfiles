@@ -16,9 +16,11 @@ Aliases:
 - nList			[lists all npm modules in pwd]
 - nListG		[lists all global npm modules]
 - nClean		[removes package-lock.json and node_modules from pwd]
+- nil			[npx installs custom eslint-config with required dev dependencies]
+- ncr			[npx create-react-app in current pwd]
 - nis			[npm install --save]
 - nid			[npm install --save-dev]
-
+- nrd			[npm run dev]
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 
