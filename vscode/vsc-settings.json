@@ -86,6 +86,7 @@
     "problems.showCurrentInStatus": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.preferences.importModuleSpecifierEnding": "js",
     "javascript.updateImportsOnFileMove.enabled": "always",
     // Emmet
     "emmet.triggerExpansionOnTab": true,
