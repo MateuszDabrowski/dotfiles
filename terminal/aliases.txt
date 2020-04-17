@@ -49,6 +49,9 @@ Aliases:
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
+- ho 			[heroku open pwd in browser]
+- hc			[heroku set config from .env in pwd]
+
 - webppng		[creates .webp version of all .png images in pwd]
 - webpjpg		[creates .webp version of all .jpg images in pwd]
 - prepImages <res>	[creates 2x (provided res), 1x, thumb-2x, thumb-1x .jpg + .webp versions of images in pwd]

@@ -130,7 +130,7 @@ alias mongoStart="brew services run mongodb-community || brew services list"
 alias mongoStop="brew services stop mongodb-community || brew services list"
 
 #--------------------
-# Git aliases
+# Git & Heroku aliases
 #--------------------
 alias gs="git status"
 alias gitLog="git log --pretty=format:'%C(red)%h%C(reset) -%C(auto)%d%C(reset) %C(dim yellow)%an%C(reset)%n%C(white)%s%C(reset) %n%C(yellow)%cr »%C(reset) %C(dim yellow)%ci%C(reset)%n' --reverse"
@@ -147,6 +147,9 @@ function gcom() {
 }
 alias gpush="git push origin master"
 alias gphm="git push heroku master"
+alias ho="heroku open"
+alias hc="heroku config:set $(cat .env | sed '/^$/d; /#[[:print:]]*$/d')"
+
 
 #--------------------
 # Python aliases
