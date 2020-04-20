@@ -121,6 +121,7 @@ alias nil="npx install-peerdeps eslint-config-md@latest --dev"
 alias nis="npm i -S"
 alias nid="npm i -D"
 alias nrd="npm run dev"
+alias nrs="npm run server"
 
 #--------------------
 # Mongo aliases
