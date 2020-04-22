@@ -149,8 +149,7 @@ function gcom() {
 alias gpush="git push origin master"
 alias gphm="git push heroku master"
 alias ho="heroku open"
-alias hc="heroku config:set $(cat .env | sed '/^$/d; /#[[:print:]]*$/d')"
-
+alias hlog="heroku logs --tail"
 
 #--------------------
 # Python aliases
