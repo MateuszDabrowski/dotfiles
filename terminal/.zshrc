@@ -171,7 +171,7 @@ alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d 
 #--------------------
 # Other aliases
 #--------------------
-alias resetTouchBar="pkill 'Touch Bar agent' && killall 'ControlStrip';"
+alias resetTouchBar="sudo pkill TouchBarServer; sudo killall ControlStrip"
 alias png2webp="find ./ -type f -iname '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
 alias jpg2webp="find ./ -type f -iname '*.jpg' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.jpg}.webp\"' _ {} \;"
 
