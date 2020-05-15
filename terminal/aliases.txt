@@ -25,6 +25,11 @@ Aliases:
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 
+- gCreate		[alias for npx gatsby new - follow with project name and [optional] project source]
+- gDevelop		[alias for npx gatsby develop]
+- gBuild		[alias for npx gatsby build]
+- gServe		[alias for npx gatsby serve]
+
 - mongoStart		[Starts MongoDB as a Service]
 - mongoStop		[Stops MongoDb as a Service]
 

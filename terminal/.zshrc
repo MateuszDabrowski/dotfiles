@@ -124,6 +124,15 @@ alias nrd="npm run dev"
 alias nrs="npm run server"
 
 #--------------------
+# Gatsby aliases
+#--------------------
+
+alias gCreate="npx gastby new"
+alias gDev="npx gatsby develop"
+alias gBuild="npx gatsby develop"
+alias gServe="npx gatsby serve"
+
+#--------------------
 # Mongo aliases
 #--------------------
 
