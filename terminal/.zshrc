@@ -44,11 +44,13 @@ setopt auto_cd
 #--------------------
 # Show alias list
 #--------------------
+
 alias aliases="cat ~/Documents/Code/Dotfiles/terminal/aliases.txt;"
 
 #--------------------
 # Edit .zshrc/aliases
 #--------------------
+
 alias zshrc="code --wait ~/.zshrc && go dot && cp ~/.zshrc ~/Documents/Code/Dotfiles/terminal && reload && go dot && git status"
 alias editAliases="go dot && cd terminal && code --wait aliases.txt && go dot && git status"
 alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
@@ -56,27 +58,21 @@ alias reload=". ~/.zshrc && echo 'Config ~/.zshrc reloaded'"
 #--------------------
 # Show/Hide files
 #--------------------
+
 alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files visible'"
 alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder /System/Library/CoreServices/Finder.app && echo 'Hidden files hidden'"
 
 #--------------------
 # Homebrew aliases
 #--------------------
+
 alias brewery="brew update && brew upgrade && brew cleanup"
-
-#--------------------
-# Parcel aliases
-#--------------------
-
-alias pInit="{ npm init -y || npm init; } && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'","'"'"build"'"'": "'"'"parcel build index.html"'"'"}' && json -I -f package.json -e 'this.browserslist=["'"'">0.5%"'"'", "'"'"not ie 11"'"'", "'"'"not op_mini all"'"'", "'"'"not dead"'"'"]' && npm i parcel-bundler -D && npm audit fix"
-alias pStart="npm start || echo 'Check whether you have index.html file in folder or update start script value in package.json'"
-alias pBuild="npm run build || echo 'Check whether you have index.html file in folder or update build script value in package.json'"
 
 #--------------------
 # NPM aliases
 #--------------------
 
-function nInit() {
+function nCreate() {
     # Create NodeJS Server
     npm init -y || npm init
     # Install basic packages for NodeJS
@@ -85,7 +81,7 @@ function nInit() {
     # Install pre-configured eslint for NodeJS
     nil
     # Update package.json for NodeJS
-    json -I -f package.json -e 'this.scripts={"'"start"'": "'"node server.js"'","'"server"'": "'"nodemon server.js"'", "'"client-install"'": "'"npm i --prefix client"'", "'"client"'": "'"npm start --prefix client"'", "'"dev"'": "'"concurrently \\\"npm run server\\\" \\\"npm run client\\\""'"}'
+    json -I -f package.json -e 'this.scripts={"'"start"'": "'"node server.js"'","'"server"'": "'"nodemon server.js"'", "'"client-install"'": "'"npm i --prefix client"'", "'"client"'": "'"npm start --prefix client"'", "'"develop"'": "'"concurrently \\\"npm run server\\\" \\\"npm run client\\\""'"}'
     json -I -f package.json -e 'this.type="'"module"'"'
     json -I -f package.json -e 'this.main="'"server.js"'"'
     json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
@@ -110,27 +106,20 @@ function nInit() {
     # Launch git
     git init
 }
-alias nStart="( sleep 1 && open http://localhost:3000 ) & npm start || echo 'Check whether you have app.js file in folder or update start start value in package.json'"
-alias nDev="( sleep 1 && open http://localhost:3000 ) & npm run dev || echo 'Check whether you have app.js file in folder or update build dev value in package.json'"
+alias pCreate="{ npm init -y || npm init; } && nil && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'","'"'"build"'"'": "'"'"parcel build index.html"'"'"}' && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && json -I -f package.json -e 'this.browserslist=["'"'">0.5%"'"'", "'"'"not ie 11"'"'", "'"'"not op_mini all"'"'", "'"'"not dead"'"'"]' && npm i parcel-bundler -D && npm audit fix"
+alias rCreate="npx create-react-app . && mkdir -p src/components && nil && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && npm audit fix"
+alias gCreate="npx gatsby new . && nil && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && npm audit fix"
 
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
 alias nClean="rm package-lock.json && rm -R node_modules"
-alias ncr="npx create-react-app ."
 alias nil="npx install-peerdeps eslint-config-md@latest --dev"
 alias nis="npm i -S"
 alias nid="npm i -D"
-alias nrd="npm run dev"
+alias nrd="(sleep 1 && open http://localhost:3000) && (npm run dev || npm run develop)"
 alias nrs="npm run server"
-
-#--------------------
-# Gatsby aliases
-#--------------------
-
-alias gCreate="npx gatsby new"
-alias gDev="npx gatsby develop"
-alias gBuild="npx gatsby develop"
-alias gServe="npx gatsby serve"
+alias nrb="npm run build"
+alias ns="npm start"
 
 #--------------------
 # Mongo aliases
@@ -303,6 +292,7 @@ function favicon() {
 #------------------
 # Jump cd
 #------------------
+
 function go() {
     cd
     if [ "$1" = desk ]
@@ -392,6 +382,7 @@ function lh() {
 #------------------
 # Find process
 #------------------
+
 function findProcess() {
     if [ "$1" ]
 	    then

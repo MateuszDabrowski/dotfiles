@@ -6,32 +6,35 @@ Aliases:
 - showFiles 		[restarts Finder and show hidden files]
 - hideFiles 		[restarts Finder and hide hidden files]
 
-- pInit			[initializes parcel installation in current folder]
-- pStart		[runs parcel with "npm start"]
-- pBuild		[builds parcel with "npm run build"]
-
-- nInit			[initializes MERN package in pwd]
-- nStart		[opens localhost:3000 and runs node server with "npm start"]
-- nDev			[opens localhost:3000 and runs nodemon with "npm run dev"]
+- nCreate		[initializes MERN package in pwd]
+- pCreate		[initializes parcel installation in current folder plus magic]
+- rCreate		[npx create-react-app installation in current folder plus magic]
+- gCreate		[alias for npx gatsby new plus magic]
 - nList			[lists all npm modules in pwd]
 - nListG		[lists all global npm modules]
 - nClean		[removes package-lock.json and node_modules from pwd]
 - nil			[npx installs custom eslint-config with required dev dependencies]
-- ncr			[npx create-react-app in current pwd]
 - nis			[npm install --save]
 - nid			[npm install --save-dev]
-- nrd			[npm run dev]
+- nrd			[open localhost:3000 and npm run dev or develop]
 - nrs			[npm run server]
+- nrb			[npm run build]
+- ns			[npm start]
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 
-- gCreate		[alias for npx gatsby new - follow with project name and [optional] project source]
-- gDevelop		[alias for npx gatsby develop]
-- gBuild		[alias for npx gatsby build]
-- gServe		[alias for npx gatsby serve]
-
 - mongoStart		[Starts MongoDB as a Service]
 - mongoStop		[Stops MongoDb as a Service]
+
+- gs			[git status]
+- gall			[git add -all; git status]
+- gpush			[git push origin master]
+- gphm			[git push heroku master]
+- gitLog		[pretty git log --oneline with additional data]
+- gitSearch		[uses grep to search through git log (case insensitive)]
+
+- ho 			[heroku open pwd in browser]
+- hlog			[heroku logs --tail]
 
 - py			[shortcut for "python3.6"]
 - pip			[shortcut for "pip3.6"]
@@ -47,16 +50,6 @@ Aliases:
 - brewery		[updates all brew packages]
 
 - resetTouchBar		[restarts whole Touch Bar]
-
-- gs			[git status]
-- gall			[git add -all; git status]
-- gpush			[git push origin master]
-- gphm			[git push heroku master]
-- gitLog		[pretty git log --oneline with additional data]
-- gitSearch		[uses grep to search through git log (case insensitive)]
-
-- ho 			[heroku open pwd in browser]
-- hlog			[heroku logs --tail]
 
 - webppng		[creates .webp version of all .png images in pwd]
 - webpjpg		[creates .webp version of all .jpg images in pwd]
