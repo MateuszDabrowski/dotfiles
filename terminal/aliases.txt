@@ -35,6 +35,8 @@ Aliases:
 
 - ho 			[heroku open pwd in browser]
 - hlog			[heroku logs --tail]
+- hStopWeb		[alias for: heroku ps:scale web=0]
+- hStartWeb		[alias for: heroku ps:scale web=1]
 
 - py			[shortcut for "python3.6"]
 - pip			[shortcut for "pip3.6"]

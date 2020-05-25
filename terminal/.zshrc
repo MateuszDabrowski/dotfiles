@@ -148,6 +148,8 @@ alias gpush="git push origin master"
 alias gphm="git push heroku master"
 alias ho="heroku open"
 alias hlog="heroku logs --tail"
+alias hStopWeb="heroku ps:scale web=0"
+alias hStartWeb="heroku ps:scale web=1"
 
 #--------------------
 # Python aliases
