@@ -6,6 +6,8 @@ Aliases:
 - showFiles 		[restarts Finder and show hidden files]
 - hideFiles 		[restarts Finder and hide hidden files]
 
+- vsc			[open current directory in Visual Studio Code]
+
 - nCreate		[initializes MERN package in pwd]
 - pCreate		[initializes parcel installation in current folder plus magic]
 - rCreate		[npx create-react-app installation in current folder plus magic]
