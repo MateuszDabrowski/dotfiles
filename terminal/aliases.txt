@@ -22,6 +22,7 @@ Aliases:
 - nrs			[npm run server]
 - nrb			[npm run build]
 - ns			[npm start]
+- deploy		[npm run deploy]
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 

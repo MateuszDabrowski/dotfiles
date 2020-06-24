@@ -1,6 +1,7 @@
 # SETTINGS
 
 export ZSH="/Users/md/.oh-my-zsh"
+export GIT_USER="MateuszDabrowski"
 
 #-------------------------------------
 # PATH CONFIGURATION
@@ -120,6 +121,7 @@ alias nrd="(sleep 1 && open http://localhost:3000) && (npm run dev || npm run de
 alias nrs="npm run server"
 alias nrb="npm run build"
 alias ns="npm start"
+alias deploy="npm run deploy"
 
 #--------------------
 # Mongo aliases
@@ -312,7 +314,7 @@ function go() {
             cd Documents/Code/JS; ls
     elif [ "$1" = md ]
 	      then
-	          cd Documents/Code/HTML/mateuszdabrowski; ls
+	          cd Documents/Code/JS/md; ls
     elif [ "$1" = aipp ]
 	      then
 	          cd Documents/Code/HTML/aipp; ls
