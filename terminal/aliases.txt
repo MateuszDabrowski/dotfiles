@@ -30,7 +30,9 @@ Aliases:
 - mongoStop		[Stops MongoDb as a Service]
 
 - gs			[git status]
-- gall			[git add -all; git status]
+- gd 			[git diff]
+- ga			[git add]
+- gaa			[git add -all; git status]
 - gpush			[git push origin master]
 - gphm			[git push heroku master]
 - gitLog		[pretty git log --oneline with additional data]
