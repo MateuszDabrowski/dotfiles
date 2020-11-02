@@ -300,6 +300,9 @@ function go() {
     if [ "$1" = desk ]
 	    then
 	        cd Desktop; ls
+    elif [ "$1" = dl ]
+	    then
+	        cd Downloads; ls
     elif [ "$1" = code ]
 	    then
 	        cd Documents/Code; ls

@@ -70,7 +70,7 @@ Commands
 - echo			[create file - "echo 'text'>file.ext"]
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
-- go <name>     	[cd to target destination: desk, code, py, js, md, aipp, elq, jup, mjml, html, vm, dot, mern, tools]
+- go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, elq, jup, mjml, html, vm, dot, mern, tools]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
 - brewery		[updates, upgrades and cleans homebrew installs]
 - mackup backup	[backs up dotfiles to icloud]
