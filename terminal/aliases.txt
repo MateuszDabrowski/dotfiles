@@ -26,9 +26,6 @@ Aliases:
 
 - lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
 
-- mongoStart		[Starts MongoDB as a Service]
-- mongoStop		[Stops MongoDb as a Service]
-
 - gs			[git status]
 - gd 			[git diff]
 - ga			[git add]
@@ -70,7 +67,7 @@ Commands
 - echo			[create file - "echo 'text'>file.ext"]
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
+- ffmpeg		[convert video - "ffmpeg -i original.mov target.mp4"]
 - go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, elq, jup, mjml, html, vm, dot, mern, tools]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
 - brewery		[updates, upgrades and cleans homebrew installs]
-- mackup backup	[backs up dotfiles to icloud]
