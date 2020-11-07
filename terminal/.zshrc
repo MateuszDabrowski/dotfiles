@@ -32,9 +32,8 @@ unset __conda_setup
 
 ZSH_THEME="mh"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git brew node zsh-autocomplete zsh-syntax-highlighting osx)
+plugins=(git brew node zsh-autosuggestions zsh-syntax-highlighting osx)
 source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
 setopt auto_cd
 
