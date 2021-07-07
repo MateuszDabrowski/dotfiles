@@ -28,4 +28,5 @@ md WindowsPowerShell -ErrorAction SilentlyContinue
 cd WindowsPowerShell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 New-Item Microsoft.PowerShell_profile.ps1 -ItemType "file" -ErrorAction SilentlyContinue
-powershell_ise.exe .\Microsoft.PowerShell_profile.ps1```
+powershell_ise.exe .\Microsoft.PowerShell_profile.ps1
+```
