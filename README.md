@@ -6,7 +6,7 @@
 
 1. Install Xcode: `xcode-select —-install`
 2. Install Brew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-3. Install iTerm `brew cask install iterm2`
+3. Install iTerm `brew install --cask iterm2`
 4. Install ZSH: `brew install zsh`
 5. Install Oh-My-Zsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 6. Update .zshrc: `nano ~/.zshrc` (or `code ~/.zshrc` if you have VSCode with `code` command enabled)
@@ -14,7 +14,7 @@
 8. Install zsh-autosuggestions: `git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 9. Install zsh-syntax-highlighting: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 10. Install z: `brew install z`
-11. Install Fira Sans font: `brew tap caskroom/fonts` -> `brew cask install font-fira-code`
+11. Install Fira Sans font: `brew tap homebrew/cask-fonts` -> `brew install --cask font-fira-code`
 12. Enable font in iTerm2
 13. Install miniconda: `brew cask install miniconda`
 14. Check if miniconda initialization was saved to .zshrc instead of .bashrc
