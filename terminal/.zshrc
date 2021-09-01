@@ -4,29 +4,6 @@ export ZSH="/Users/md/.oh-my-zsh"
 export GIT_USER="MateuszDabrowski"
 
 #-------------------------------------
-# PATH CONFIGURATION
-#-------------------------------------
-
-# Python 3.6.6
-export PATH="/usr/local/bin/python3.6:$PATH"
-
-# Miniconda 3.7.3
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/md/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/md/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/md/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/md/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-#-------------------------------------
 # BASIC CONFIGURATION
 #-------------------------------------
 
@@ -106,9 +83,7 @@ function nCreate() {
     # Launch git
     git init
 }
-alias pCreate="{ npm init -y || npm init; } && nil && json -I -f package.json -e 'this.scripts={"'"'"start"'"'": "'"'"parcel index.html"'"'","'"'"build"'"'": "'"'"parcel build index.html"'"'"}' && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && json -I -f package.json -e 'this.browserslist=["'"'">0.5%"'"'", "'"'"not ie 11"'"'", "'"'"not op_mini all"'"'", "'"'"not dead"'"'"]' && npm i parcel-bundler -D && npm audit fix"
 alias rCreate="npx create-react-app . && mkdir -p src/components && nil && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && npm audit fix"
-alias gCreate="npx gatsby new . && nil && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && npm audit fix"
 
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
@@ -141,23 +116,6 @@ alias ho="heroku open"
 alias hlog="heroku logs --tail"
 alias hStopWeb="heroku ps:scale web=0"
 alias hStartWeb="heroku ps:scale web=1"
-
-#--------------------
-# Python aliases
-#--------------------
-alias py="python3.6"
-alias py2="python2.7"
-alias pip="pip3.6"
-alias pip2="pip2.7"
-alias jup="go jup && conda activate && jupyter lab && conda deactivate"
-alias jupKernel="go jup && jupyter kernelspec list"
-alias pyApp="py setup.py build"
-alias elqPackPL="go vm && rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent &&cd Elquent/utils/api && rm eloqua.p"
-alias elqPackCORP="go vm && rm -rf ELQuent;cp -a /Users/md/Documents/Code/Python/ELQuent/. /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent && cd Elquent/utils/api && rm *.p"
-alias elqUpload="cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/exe.win-amd64-3.6 /Users/md/Documents/Code/Python/ELQuent/build && cp -a /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/ELQuent/build/*.zip /Users/md/Google\ Drive\ File\ Stream/My\ Drive/Apps"
-alias elq="go elq && py elquent.py"
-alias pipery="pip3.6 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3.6 install -U"
-alias pipery2="pip2.7 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2.7 install -U"
 
 #--------------------
 # Other aliases
@@ -310,15 +268,6 @@ function go() {
     elif [ "$1" = aipp ]
 	      then
 	          cd Documents/Code/HTML/aipp; ls
-    elif [ "$1" = elq ]
-        then
-            cd Documents/Code/Python/ELQuent; ls
-    elif [ "$1" = elq2 ]
-        then
-            cd Documents/Code/MERN/elquent-js; ls
-    elif [ "$1" = jup ]
-        then
-            cd Documents/Code/Python/Jupyter; ls
     elif [ "$1" = html ]
         then
             cd Documents/Code/HTML; ls
@@ -328,15 +277,9 @@ function go() {
     elif [ "$1" = dot ]
         then
             cd Documents/Code/Dotfiles; ls
-    elif [ "$1" = mern ]
-        then
-            cd Documents/Code/MERN; ls
     elif [ "$1" = tools ]
         then
             cd Documents/Code/Tools; ls
-    elif [ "$1" = vm ]
-        then
-            cd /Users/md/Documents/Virtual\ Machines.localized/VMShared/Code/; ls
     fi
 }
 
