@@ -9,7 +9,7 @@ export GIT_USER="MateuszDabrowski"
 
 ZSH_THEME="mh"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git brew node zsh-autosuggestions zsh-syntax-highlighting osx)
+plugins=(git brew node zsh-autosuggestions zsh-syntax-highlighting macos)
 source $ZSH/oh-my-zsh.sh
 . `brew --prefix`/etc/profile.d/z.sh
 setopt auto_cd
