@@ -8,12 +8,11 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     // Workbench
-    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
     "workbench.iconTheme": "vscode-icons",
     "workbench.fontAliasing": "auto",
     "workbench.editor.showIcons": true,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false,
+    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#00BCD4",
         "list.activeSelectionForeground": "#00BCD4",
@@ -31,7 +30,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.renderLineHighlight": "all",
-    "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "selection",
     "editor.selectionHighlight": true,
     "editor.formatOnSave": true,
@@ -44,6 +42,9 @@
     "editor.colorDecorators": false,
     "editor.fontSize": 14,
     "editor.maxTokenizationLineLength": 40000,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
+    "editor.bracketPairColorization.enabled": true,
     "editor.rulers": [
         80,
         120
@@ -54,25 +55,9 @@
     "terminal.integrated.fontLigatures": true,
     "terminal.integrated.fontWeight": "500",
     "terminal.integrated.fontSize": 14,
-    // Touchbar
-    "nasc-touchbar.goToDefinition": false,
-    "nasc-touchbar.jumpToBracket": true,
-    "nasc-touchbar.toggleWhiteSpace": true,
-    "nasc-touchbar.blockComment": true,
-    "nasc-touchbar.showCommands": false,
-    "nasc-touchbar.togglePanel": false,
-    "nasc-touchbar.addCursorBelow": false,
-    "nasc-touchbar.goToNext": true,
-    // Python
-    "python.autoComplete.addBrackets": true,
-    "python.formatting.provider": "autopep8",
-    "python.linting.pylintArgs": [
-        "--disable=E1101, C0103, C0301, C0302, C0414, W0603, R1705, W0105"
-    ],
     // HTML
     "html.format.unformatted": "wbr, a, em, i, b, strong, span, code, sup, sub",
     // ESLint
-    "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "eslint.run": "onSave",
     "eslint.workingDirectories": [
@@ -83,6 +68,9 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    "editor.unicodeHighlight.allowedCharacters": {
+        "›": true
+    },
     "problems.showCurrentInStatus": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -90,8 +78,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     // Emmet
     "emmet.triggerExpansionOnTab": true,
-    // ToDo
-    "todo-tree.tree.showScanModeButton": false,
     // Formatting
     "[javascript]": {
         "editor.formatOnSave": false
@@ -108,6 +94,24 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    // LiveServer
-    "liveServer.settings.donotShowInfoMsg": true,
+    "tabnine.experimentalAutoImports": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "git.terminalAuthentication": false,
+    // MCFS
+    "mcfs.notifications": {
+        "hasOpenedConnectionManager": false,
+        "hasConnectedToMC": false,
+        "dontShowConnectionManagerAlert": false,
+        "hasShownChangelog": false,
+        "hasSeenPromoForVersion": "3.0"
+    }
 }
