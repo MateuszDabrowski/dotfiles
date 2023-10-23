@@ -30,7 +30,7 @@ Aliases:
 - gd 			[git diff]
 - ga			[git add]
 - gaa			[git add -all; git status]
-- gpush			[git push origin master]
+- gpush			[git push origin master || git push origin main]
 - gphm			[git push heroku master]
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]

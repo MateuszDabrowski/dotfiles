@@ -110,7 +110,7 @@ function gcom() {
             gitLog -3
     fi;
 }
-alias gpush="git push origin master"
+alias gpush="git push origin master || git push origin main"
 alias gphm="git push heroku master"
 alias ho="heroku open"
 alias hlog="heroku logs --tail"
