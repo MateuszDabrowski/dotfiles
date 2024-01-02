@@ -68,6 +68,6 @@ Commands
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
 - ffmpeg		[convert video - "ffmpeg -i original.mov target.mp4"]
-- go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, elq, jup, mjml, html, vm, dot, mern, tools]
+- go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, sfmc, html, mjml, dot, tools]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
 - brewery		[updates, upgrades and cleans homebrew installs]

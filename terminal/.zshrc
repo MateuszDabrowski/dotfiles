@@ -268,6 +268,9 @@ function go() {
     elif [ "$1" = aipp ]
 	      then
 	          cd Documents/Code/HTML/aipp; ls
+    elif [ "$1" = sfmc ]
+	      then
+	          cd Documents/Code/SFMC; ls
     elif [ "$1" = html ]
         then
             cd Documents/Code/HTML; ls
