@@ -8,10 +8,6 @@ Aliases:
 
 - vsc			[open current directory in Visual Studio Code]
 
-- nCreate		[initializes MERN package in pwd]
-- pCreate		[initializes parcel installation in current folder plus magic]
-- rCreate		[npx create-react-app installation in current folder plus magic]
-- gCreate		[alias for npx gatsby new plus magic]
 - nList			[lists all npm modules in pwd]
 - nListG		[lists all global npm modules]
 - nClean		[removes package-lock.json and node_modules from pwd]
@@ -31,29 +27,10 @@ Aliases:
 - ga			[git add]
 - gaa			[git add -all; git status]
 - gpush			[git push origin master || git push origin main]
-- gphm			[git push heroku master]
 - gitLog		[pretty git log --oneline with additional data]
 - gitSearch		[uses grep to search through git log (case insensitive)]
 
-- ho 			[heroku open pwd in browser]
-- hlog			[heroku logs --tail]
-- hStopWeb		[alias for: heroku ps:scale web=0]
-- hStartWeb		[alias for: heroku ps:scale web=1]
-
-- py			[shortcut for "python3.6"]
-- pip			[shortcut for "pip3.6"]
-- pyApp			[cx_Freeze from setup.py]
-- elqPackPL		[prepares ELQuent PLver for packing in VM]
-- elqPackCORP		[prepares ELQuent CORPver for packing in VM]
-- elqUpload		[moves ELQuent packages to appropriate folders]
-- elq			[launches elquent.py]
-- jup 			[launches jupyter lab in conda env]
-- jupKernel 		[lists kernels available in jupyter lab]
-- pipery 		[updates all pip3.6 packages]
-
 - brewery		[updates all brew packages]
-
-- resetTouchBar		[restarts whole Touch Bar]
 
 - webppng		[creates .webp version of all .png images in pwd]
 - webpjpg		[creates .webp version of all .jpg images in pwd]
@@ -70,4 +47,3 @@ Commands
 - ffmpeg		[convert video - "ffmpeg -i original.mov target.mp4"]
 - go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, sfmc, html, mjml, dot, tools]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
-- brewery		[updates, upgrades and cleans homebrew installs]

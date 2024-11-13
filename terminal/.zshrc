@@ -49,42 +49,6 @@ alias brewery="brew update && brew upgrade && brew cleanup"
 # NPM aliases
 #--------------------
 
-function nCreate() {
-    # Create NodeJS Server
-    npm init -y || npm init
-    # Install basic packages for NodeJS
-    npm i -S axios concurrently dotenv express mongoose
-    npm i -D nodemon
-    # Install pre-configured eslint for NodeJS
-    nil
-    # Update package.json for NodeJS
-    json -I -f package.json -e 'this.scripts={"'"start"'": "'"node server.js"'","'"server"'": "'"nodemon server.js"'", "'"client-install"'": "'"npm i --prefix client"'", "'"client"'": "'"npm start --prefix client"'", "'"develop"'": "'"concurrently \\\"npm run server\\\" \\\"npm run client\\\""'"}'
-    json -I -f package.json -e 'this.type="'"module"'"'
-    json -I -f package.json -e 'this.main="'"server.js"'"'
-    json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
-    # Create .env with initial content
-    echo DB_CONNECT= > .env
-    # Create folder structure
-    mkdir -p routes/api models client
-    # Make initial files
-    touch server.js ./routes/api/items.js ./models/ItemSchema.js
-    # Create React App
-    cd client/
-    npx create-react-app .
-    rm README.md
-    mkdir -p src/components
-    # Update package.json for React
-    json -I -f package.json -e 'this.type="'"module"'"'
-    json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}'
-    json -I -f package.json -e 'this.proxy="'"http://localhost:5000"'"'
-    cd ../
-    # Create .gitignore with basic exclusions
-    (echo node_modules && echo .env) > .gitignore
-    # Launch git
-    git init
-}
-alias rCreate="npx create-react-app . && mkdir -p src/components && nil && json -I -f package.json -e 'this.eslintConfig={"'"extends"'": ["'"md"'"]}' && npm audit fix"
-
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
 alias nClean="rm package-lock.json && rm -R node_modules"
@@ -111,17 +75,11 @@ function gcom() {
     fi;
 }
 alias gpush="git push origin master || git push origin main"
-alias gphm="git push heroku master"
-alias ho="heroku open"
-alias hlog="heroku logs --tail"
-alias hStopWeb="heroku ps:scale web=0"
-alias hStartWeb="heroku ps:scale web=1"
 
 #--------------------
 # Other aliases
 #--------------------
 alias vsc="open -a 'Visual Studio Code.app' ."
-alias resetTouchBar="sudo pkill TouchBarServer; sudo killall ControlStrip"
 alias png2webp="find ./ -type f -iname '*.png' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.png}.webp\"' _ {} \;"
 alias jpg2webp="find ./ -type f -iname '*.jpg' | xargs -P 8 -I {} sh -c 'cwebp -lossless \$1 -o \"\${1%.jpg}.webp\"' _ {} \;"
 
@@ -256,33 +214,24 @@ function go() {
     elif [ "$1" = code ]
 	    then
 	        cd Documents/Code; ls
-    elif [ "$1" = py ]
-        then
-            cd Documents/Code/Python; ls
-    elif [ "$1" = js ]
-        then
-            cd Documents/Code/JS; ls
     elif [ "$1" = md ]
 	      then
-	          cd Documents/Code/JS/md; ls
+	          cd Documents/Code/mateuszdabrowski.pl; ls
     elif [ "$1" = aipp ]
 	      then
-	          cd Documents/Code/HTML/aipp; ls
-    elif [ "$1" = sfmc ]
+	          cd Documents/Code/aipp.pl; ls
+    elif [ "$1" = sf ]
 	      then
-	          cd Documents/Code/SFMC; ls
-    elif [ "$1" = html ]
-        then
-            cd Documents/Code/HTML; ls
+	          cd Documents/Code/salesforce; ls
     elif [ "$1" = mjml ]
         then
-            cd Documents/Code/MJML; ls
+            cd Documents/Code/mjml-email-templates; ls
     elif [ "$1" = dot ]
         then
-            cd Documents/Code/Dotfiles; ls
+            cd Documents/Code/dotfiles; ls
     elif [ "$1" = tools ]
         then
-            cd Documents/Code/Tools; ls
+            cd Documents/Code/tools; ls
     fi
 }
 
@@ -321,7 +270,6 @@ function lh() {
         open http://localhost:3000
     fi;
 }
-
 #------------------
 # Find process
 #------------------
@@ -334,5 +282,3 @@ function findProcess() {
         ps -ax
     fi;
 }
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
