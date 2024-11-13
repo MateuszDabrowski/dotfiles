@@ -17,6 +17,7 @@
 11. Enable font in iTerm2
 12. Install node: `brew install node`
 13. Install and apply material-design-colors iTerm2 preset: <https://github.com/MartinSeeler/iterm2-material-design>
+14. Set git logs to output inline with cat: `git config --global core.pager cat`
 
 ## Powershell aliasing
 
