@@ -270,15 +270,3 @@ function lh() {
         open http://localhost:3000
     fi;
 }
-#------------------
-# Find process
-#------------------
-
-function findProcess() {
-    if [ "$1" ]
-	    then
-	        ps -ax | grep $1
-    else
-        ps -ax
-    fi;
-}
