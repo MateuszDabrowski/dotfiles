@@ -18,6 +18,8 @@
 12. Install node: `brew install node`
 13. Install and apply material-design-colors iTerm2 preset: <https://github.com/MartinSeeler/iterm2-material-design>
 14. Set git logs to output inline with cat: `git config --global core.pager cat`
+15. Set git editor to use VSC: `git config --global core.editor "code --wait"`
+16. Set git author: `git config --global user.name "Mateusz Dabrowski"` & `git config --global user.email "email@address.com"`
 
 ## Powershell aliasing
 
