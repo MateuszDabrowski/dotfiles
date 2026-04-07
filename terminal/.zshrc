@@ -52,6 +52,7 @@ alias brewery="brew update && brew upgrade && brew cleanup"
 alias nListG="npm list -g --depth=0"
 alias nList="npm list --depth=0"
 alias nClean="rm package-lock.json && rm -R node_modules"
+alias nRefresh="rm package-lock.json && rm -R node_modules && npm install --legacy-peer-deps"
 alias nil="npx install-peerdeps eslint-config-md@latest --dev"
 alias nis="npm i -S"
 alias nid="npm i -D"
@@ -211,6 +212,9 @@ function go() {
     elif [ "$1" = dl ]
 	    then
 	        cd Downloads; ls
+    elif [ "$1" = doc ]
+	    then
+	        cd Documents; ls
     elif [ "$1" = code ]
 	    then
 	        cd Documents/Code; ls
@@ -226,12 +230,21 @@ function go() {
     elif [ "$1" = mjml ]
         then
             cd Documents/Code/mjml-email-templates; ls
+    elif [ "$1" = kb ]
+        then
+            cd Documents/Knowledge\ Base; ls
+    elif [ "$1" = clock ]
+        then
+            cd Documents/Code/mce-world-clock; ls
     elif [ "$1" = dot ]
         then
             cd Documents/Code/dotfiles; ls
     elif [ "$1" = tools ]
         then
             cd Documents/Code/tools; ls
+    elif [ "$1" = df ]
+        then
+            cd Documents/Code/tools/diagramforce; ls
     fi
 }
 
@@ -246,21 +259,13 @@ function lh() {
             else
                 open /Applications/Safari.app http://localhost:3000
             fi;
-        elif [ "$1" = c ]
+        elif [ "$1" = v ]
         then
             if [ "$2" ]
             then
-                open /Applications/Google\ Chrome.app http://localhost:$2
+                open /Applications/Vivaldi.app http://localhost:$2
             else
-                open /Applications/Google\ Chrome.app http://localhost:3000
-            fi;
-        elif [ "$1" = f ]
-        then
-            if [ "$2" ]
-            then
-                open /Applications/Firefox\ Developer\ Edition.app http://localhost:$2
-            else
-                open /Applications/Firefox\ Developer\ Edition.app http://localhost:3000
+                open /Applications/Vivaldi.app http://localhost:3000
             fi;
         elif [ "$1" ]
         then

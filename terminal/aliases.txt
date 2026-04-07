@@ -11,6 +11,7 @@ Aliases:
 - nList			[lists all npm modules in pwd]
 - nListG		[lists all global npm modules]
 - nClean		[removes package-lock.json and node_modules from pwd]
+- nRefresh		[removes package-lock.json and node_modules from pwd and npm installs with legacy peerdeps]
 - nil			[npx installs custom eslint-config with required dev dependencies]
 - nis			[npm install --save]
 - nid			[npm install --save-dev]
@@ -20,7 +21,7 @@ Aliases:
 - ns			[npm start]
 - deploy		[npm run deploy]
 
-- lh <app> <port>	[launches localhost with given app (s, c, f) on given port]
+- lh <app> <port>	[launches localhost with given app (s, v) on given port]
 
 - gs			[git status]
 - gd 			[git diff]
@@ -45,5 +46,5 @@ Commands
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
 - ffmpeg		[convert video - "ffmpeg -i original.mov target.mp4"]
-- go <name>     	[cd to target destination: desk, dl, code, py, js, md, aipp, sfmc, html, mjml, dot, tools]
+- go <name>     	[cd to target destination: desk, dl, code, md, aipp, sf, mjml, kb, clock, dot, tools, df]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]
