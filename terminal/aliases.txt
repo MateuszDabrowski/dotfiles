@@ -46,5 +46,5 @@ Commands
 - perl			[replace string in files - "perl -pi -w -e 's/search/replace/g;' */*.mjml"]
 - sips			[resize images - "sips -Z 1800 *.jpg"]
 - ffmpeg		[convert video - "ffmpeg -i original.mov target.mp4"]
-- go <name>     	[cd to target destination: desk, dl, code, md, aipp, sf, mjml, kb, clock, dot, tools, df]
+- go <name>     	[cd to target destination: desk, dl, code, md, aipp, sf, mjml, kb, dot, tools, df, cf, shelf]
 - findProcess <name> 	[returns processes with PID for provided name, can be "kill PID" later]

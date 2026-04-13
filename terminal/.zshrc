@@ -233,9 +233,6 @@ function go() {
     elif [ "$1" = kb ]
         then
             cd Documents/Knowledge\ Base; ls
-    elif [ "$1" = clock ]
-        then
-            cd Documents/Code/mce-world-clock; ls
     elif [ "$1" = dot ]
         then
             cd Documents/Code/dotfiles; ls
@@ -245,6 +242,12 @@ function go() {
     elif [ "$1" = df ]
         then
             cd Documents/Code/tools/diagramforce; ls
+    elif [ "$1" = cf ]
+        then
+            cd Documents/Code/tools/clockforce; ls
+    elif [ "$1" = shelf ]
+        then
+            cd Documents/Code/tools/shelf; ls
     fi
 }
 
