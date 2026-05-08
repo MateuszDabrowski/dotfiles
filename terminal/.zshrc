@@ -247,10 +247,19 @@ function go() {
             cd Documents/Code/tools/clockforce; ls
     elif [ "$1" = shelf ]
         then
-            cd Documents/Code/tools/shelf/shelf; ls
+            cd Documents/Code/tools/shelf; ls
     elif [ "$1" = sift ]
         then
-            cd Documents/Code/tools/sift/sift; ls
+            cd Documents/Code/tools/sift; ls
+    elif [ "$1" = sweat ]
+        then
+            cd Documents/Code/tools/sweat; ls
+    elif [ "$1" = strum ]
+        then
+            cd Documents/Code/tools/strum; ls
+    elif [ "$1" = slay ]
+        then
+            cd Documents/Code/games/slay; ls
     fi
 }
 
